@@ -33,7 +33,9 @@ class IssuesController extends BaseController {
 		$issue->name = Input::get("name");
 		$issue->desc = Input::get("desc");
 		$issue->status = "new";
-		$issue->user_id = 2; //Auth::user()->id;
+		$issue->user_id = Auth::user()->id;
+		$issue->latitude = Input::get("latitude");
+		$issue->longitude = Input::get("longitude");
 
 
 		if (Input::hasFile('photo'))
@@ -49,10 +51,10 @@ class IssuesController extends BaseController {
 		    $issue->photo = '/imgs/' . $newName;
 		}
 
-		// save file, get pth, etc.
-		// $issue->photo = Input::get("photo");
 		$issue->save();
-		die("Receiving post");
+		return Redirect::to('issues/' . $issue->id);
+		// $redirect = Redirect::route('issues', $issue->id);
+		// die("Receiving post");
 	}
 
 	/**

@@ -24,6 +24,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="{{ URL::to('js/jquery.dataTables.min.js')}}"></script>
         <script src="{{ URL::to('js/shared.js')}}"></script>
+        <script src="{{ URL::to('js/geolocate.js')}}"></script>
         <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyAeSzS1e65KEZkl9ENwN83zAJ64HfuYrQ4"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization&.js"></script>
         <!-- Noty -->
@@ -55,8 +56,8 @@
 
             <aside class=" brand-block notification-suw ">
         		<h1 class="h4 note-suw">Welcome to Fix Worthy! Want to get involved?</h1>
-                <button type="button" class="btn btn-primary btn-sm important-suw" role="button">Create An Idea</button>
-        		<!--<a class="pill-suw icn important-suw h4 notification-btn-suw create" href="/ideas/create">Create an Idea</a>-->
+                <button type="button" class="btn btn-primary btn-sm important-suw" role="button"><a href="{{ URL::to('issues/create')}}" >Create An Idea</a></button>
+        		
         	</aside>
 
             <nav id="page_header" class="block-suw navbar navbar-default" role="navigation">
