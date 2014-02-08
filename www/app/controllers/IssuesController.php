@@ -29,15 +29,28 @@ class IssuesController extends BaseController {
 	 */
 	public function store()
 	{
-		//pull the data from post, store it in an Issue model, save the model
 		$issue = new Issue();
 		$issue->name = Input::get("name");
 		$issue->desc = Input::get("desc");
 		$issue->status = "new";
 		$issue->user_id = 2; //Auth::user()->id;
 
+
+		if (Input::hasFile('photo'))
+		{
+		    //process file input
+		    //TODO: Validate that this is an image
+		    $newName = Uploader::processInputFilename(Input::file('photo')->getClientOriginalName());
+		    try {
+		        Input::file('photo')->move(public_path() . '/imgs', $newName);
+		    } catch (FileException $e) {
+		        return Redirect::back()->with('flash_error', "Your file could not be uploaded. Please try again")->withInput();
+		    }
+		    $issue->photo = '/imgs/' . $newName;
+		}
+
 		// save file, get pth, etc.
-		// $issue->photo = Inuput::get("photo");
+		// $issue->photo = Input::get("photo");
 		$issue->save();
 		die("Receiving post");
 	}
@@ -87,4 +100,10 @@ class IssuesController extends BaseController {
 		//
 	}
 
+}
+
+class Uploader {
+    public static function processInputFilename($filename) {
+        return time() . '-' . preg_replace('/\s+/', '-', $filename);
+    }
 }
