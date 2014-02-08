@@ -22,7 +22,7 @@
         <![endif]-->
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script src="{{ URL::to('js/jquery.dataTables.min.js')}}"></script>
+        <script src="{{ URL::to('sjs/jquery.dataTables.min.js')}}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization&.js"></script>
     </head>
     <body>
