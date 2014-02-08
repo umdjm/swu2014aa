@@ -138,3 +138,12 @@ aside {
 #signup a:hover {
 	
 }
+
+.border1 {
+	border: solid;
+}
+
+.form-actions {
+	margin:0;
+	text-align:center;
+}
