@@ -76,4 +76,23 @@ class UsersController extends BaseController {
 		//
 	}
 
+	public function login()
+	{
+		$user = array(
+			'email' => Input::get('email'),
+			'password' => Input::get('password')
+		);   
+		if (Auth::attempt($user)) {
+        	return Redirect::to('/')->with('flash_success', 'You are successfully logged in!');
+        }
+        return Redirect::to('/')->with('flash_error', 'There was an error logging you in. Please try again.');
+	}
+
+	public function logout() {
+	    Auth::logout();
+
+	    return Redirect::route('/')
+	        ->with('flash_success', 'You are successfully logged out.');
+	}
+
 }

@@ -10,26 +10,70 @@
 </div>
 
 <div id="map-row" class="row">
-  <div class="col-md-12 col-sm-12">
+  <div class="col-md-4">
+  <p>
+      Community
+      <select class="form-control">
+        <option>Ann Arbor</option>
+        <option>Plymouth/Canton</option>
+        <option>Detroit </option>
+      </select>
+  </p>
+  <p>
+      Category
+      <select class="form-control">
+        <option>Maintenance</option>
+        <option>Landscape</option>
+        <option>Cleaning</option>
+        <option>Grafiti</option>
+      </select>
+  </p>
+  </div>
+  <div class="col-md-8">
     <div id="map-div"></div>
   </div>
 </div>
 
-<div class="row">
-<div class="col-md-12">
-  <div id="tablecontainer">
-    <table id="dc-data-table" class="list table table-striped table-bordered">
-      <thead>
-      <tr>
-        <th data-dynatable-column="name">Issue Name</th>
-        <th data-dynatable-column="address">Address</th>
-        <th data-dynatable-column="votes">Votes</th>
-      </tr>
-      </thead>
-    </table>
-  </div>
-</div>
-
+<ul id="ul-example" class="row">
+  <li class="issue col-md-3" data-color="gray">
+    <div class="thumbnail">
+        <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" />
+      <div class="caption">
+        <h4>Palmer Commons Pothole</h4>
+      </div>
+    </div>
+  </li>
+  <li class="issue col-md-3" data-color="gray">
+    <div class="thumbnail">
+      <div class="thumbnail-image">
+        <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" />
+      </div>
+      <div class="caption">
+        <h4>Palmer Commons Pothole</h4>
+      </div>
+    </div>
+  </li>
+  <li class="issue col-md-3" data-color="gray">
+    <div class="thumbnail">
+      <div class="thumbnail-image">
+        <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" />
+      </div>
+      <div class="caption">
+        <h4>Palmer Commons Pothole</h4>
+      </div>
+    </div>
+  </li>
+  <li class="issue col-md-3" data-color="gray">
+    <div class="thumbnail">
+      <div class="thumbnail-image">
+        <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" />
+      </div>
+      <div class="caption">
+        <h4>Palmer Commons Pothole</h4>
+      </div>
+    </div>
+  </li>
+</ul>
 
  <script>
   var points;
