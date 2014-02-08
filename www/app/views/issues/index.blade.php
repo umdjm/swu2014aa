@@ -3,19 +3,15 @@
 @section('content')
 
 
+<div class="row">
+  <div class="col-md-12">
+   <h1>Current Issues in the Ann Arbor Community</h1>
+  </div>
+</div>
 
 <div id="map-row" class="row">
-  <div class="col-md-4">
+  <div class="col-md-12 col-sm-12">
     <div id="map-div"></div>
-  </div>
-  <div class="col-md-3">
-     <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" class="img-rounded"> </img>
-  </div>
-  <div class="col-md-5">
-      <h3 id="issue-title"></h3>
-      <p id="issue-address"> </p>
-      <p id="issue-description"></p>
-      <p><a class="btn btn-primary btn-lg" role="button">Endorse <span id="issue-votes" class="badge"></span></a></p>
   </div>
 </div>
 
@@ -41,8 +37,8 @@
 function initData()
 {
       points = [
-      {name: "Pothole on Amherst", address:"16011 Amherst", lat: 42.521089, lng: -83.20907799999998, votes: 112},
-      {name: "Broken Fence near Greenfield Elementary", address:"248 Woodward", lat: 42.4864196243879135, lng: -83.2806066962856802, votes: 59}
+      {name: "Palmer Commons Pothole", address:"100 Washtenaw Ave, Ann Arbor, MI 48109", lat: 42.3241, lng: -83.7113, votes: 112},
+      {name: "Light Broken at Big House", address:"1201 S Main St, Ann Arbor, MI 48104", lat: 42.265922, lng: -83.748776, votes: 59}
       ];
       initMap();
       initTable();
@@ -82,9 +78,9 @@ function chooseIssue(event)
 function initMap() {
   google.maps.visualRefresh = true;
 
-  var centerPos = new google.maps.LatLng(42.4864196243879135, -83.2806066962856802);
+  var centerPos = new google.maps.LatLng(42.3, -83.73);
   var mapOptions = {
-    zoom: 8,
+    zoom: 11,
     center: centerPos,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     mapTypeControl: false,
