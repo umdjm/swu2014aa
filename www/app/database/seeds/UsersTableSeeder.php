@@ -7,9 +7,17 @@ class UsersTableSeeder extends Seeder {
 		// Uncomment the below to wipe the table clean before populating
 		// DB::table('users')->truncate();
 
-		$users = array(
+		$firstUser = new User();
+		$firstUser->email = "me@scottdlowe.com";
+		$firstUser->password = Hash::make("scottsfakepassword");
+		$firstUser->name = 'Scott Lowe';
+		$firstUser->save();
 
-		);
+		$secondUser = new User();
+		$secondUser->email = "collsain@umich.edu";
+		$secondUser->password = Hash::make("scottsfakepassword");
+		$secondUser->name = 'Scott High';
+		$secondUser->save();
 
 		// Uncomment the below to run the seeder
 		// DB::table('users')->insert($users);
