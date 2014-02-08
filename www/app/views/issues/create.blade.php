@@ -24,12 +24,12 @@
 
             <div class="form-group">
 							{{ Form::label('priority','Priority') }}
-							Low
 							{{ Form::radio('priority', 3, true) }}
-							Medium
+							Low
 							{{ Form::radio('priority', 2) }}
-							High
+							Medium
 							{{ Form::radio('priority', 1) }}
+							High
 						</div>
 
 					<div class="form-group">
