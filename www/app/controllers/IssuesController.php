@@ -30,6 +30,15 @@ class IssuesController extends BaseController {
 	public function store()
 	{
 		//pull the data from post, store it in an Issue model, save the model
+		$issue = new Issue();
+		$issue->name = Input::get("name");
+		$issue->desc = Input::get("desc");
+		$issue->status = "new";
+		$issue->user_id = 2; //Auth::user()->id;
+
+		// save file, get pth, etc.
+		// $issue->photo = Inuput::get("photo");
+		$issue->save();
 		die("Receiving post");
 	}
 
