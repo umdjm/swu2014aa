@@ -1,57 +1,6 @@
 @extends('layouts.default')
 
 @section('content')
-	<div style="display:none;">
-		<div>
-			<div id="capture">
-				<video id="video" autoplay></video>
-				<img id="video-snapshot" src=""></img>
-				<canvas id="canvas" style="display:none;"></canvas>
-			</div>
-			<button id="capture-button" disabled>Take Picture</button>
-		</div>
-		<label>Title</label>
-		<input id="title"/>
-	</div>
-	
-	<script>
-
-
-		$(document).ready(function() {
-			navigator.getUserMedia  = navigator.getUserMedia ||
-                          navigator.webkitGetUserMedia ||
-                          navigator.mozGetUserMedia ||
-                          navigator.msGetUserMedia;
-
-			var $video = $('#video');
-			var image = document.getElementById('video-snapshot');
-			var canvas = document.getElementById('canvas');
-			var button = document.getElementById('capture-button');
-
-			var onSuccess = function(stream) {
-				$video.attr('src', window.URL.createObjectURL(stream));
-				button.disabled = false;
-
-				button.onclick =  function() {
-					var width = $video.width(),
-						height = $video.height();
-
-					canvas.width = width;
-					canvas.height = height;
-
-					canvas.getContext('2d').drawImage($video.get(0), 0, 0, width, height);
-					image.src = canvas.toDataURL('image/webp');
-				};
-			};
-
-			var onFail = function(err) {
-				alert('it broke');
-			};
-
-			//navigator.getUserMedia({ video: true}, onSuccess, onFail);
-		});
-	</script>
-
 	<div class="row">
 		<div class="col-xs-6 col-xs-offset-3">
 			<h3>Create New Issue</h3>
@@ -64,6 +13,15 @@
 		                </span>
 		                <img id="snapshot" src=""></img>
 		            </p>
+
+		            <div class="form-group">
+						{{ Form::label('name','Title') }}
+						{{ Form::text('name') }}
+					</div>
+					<div class="form-group">
+						{{ Form::label('desc','Description') }}
+						{{ Form::textarea('desc') }}
+		            </div>
 		            
 		            <div class="form-group">
 		                {{ Form::submit('Save Issue', array('class'=>'btn btn-primary')) }}
