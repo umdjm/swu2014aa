@@ -5,7 +5,7 @@
 		<div class="col-xs-6 col-xs-offset-3">
 			
 			<h3>Create New Issue</h3>
-			{{ Form::open(array('role' => 'form', 'url' => 'issues', 'method' => 'POST', 'files' => true)) }}
+			{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'issues', 'method' => 'POST', 'files' => true)) }}
 		        <fieldset>
 		        	<div class="form-group">
 		        		<div id="google-map"></div>
@@ -29,6 +29,8 @@
 		            <div class="form-group">
 		                {{ Form::submit('Save Issue', array('class'=>'btn btn-primary pull-right')) }}
 		            </div>
+		            {{ Form::hidden('latitude', null, array('id' => 'latitude')) }}
+		            {{ Form::hidden('longitude', null, array('id' => 'longitude')) }}
 		        </fieldset>
 		    {{ Form::close() }}
 		</div>
@@ -60,6 +62,18 @@
 					map: map,
 					draggable: true
 				});
+
+				$('#latitude').val(lat);
+				$('#longitude').val(lng);
+
+				google.maps.event.addListener(
+				    marker,
+				    'drag',
+				    function() {
+				        $('#latitude').val(marker.position.lat());
+				        $('#longitude').val(marker.position.lng());
+				    }
+				);
 			}
 
 			function onFail(err) {
