@@ -9,8 +9,9 @@
 				<p>{{ $issue->desc }}</p>
 				<p>
 					Submitted by 
-					<span>{{ $issue->name }}</span>
+					<span>{{ $issue->user->name }}</span>
 				</p>
 			</div>	
 		</div>	
 	</div>	
+@stop
