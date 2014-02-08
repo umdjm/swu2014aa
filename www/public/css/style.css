@@ -117,3 +117,15 @@ aside {
 	text-align: center;
 	padding:20px;
 }
+
+#signup {
+	color: #f3643c;
+}
+
+#signup a {
+	color: black;
+	text-decoration:none;
+}
+#signup a:hover {
+	
+}
