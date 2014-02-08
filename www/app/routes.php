@@ -16,13 +16,5 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/issues/create', function() 
-{
-	return View::make('issues.create');
-});
-Route::get('/Issues', function()
-{
-	return View::make('issues.index');
-});
 Route::resource('users', 'UsersController');
 Route::resource('issues', 'IssuesController');

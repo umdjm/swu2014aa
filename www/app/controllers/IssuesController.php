@@ -29,7 +29,8 @@ class IssuesController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		//pull the data from post, store it in an Issue model, save the model
+		die("Receiving post");
 	}
 
 	/**

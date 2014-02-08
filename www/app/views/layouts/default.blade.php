@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Works</title>
+        <title>Fix Worthy</title>
         <link rel="shortcut icon" href="{{ URL::to('img/favicon.png') }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- TODO: Add local fallback for bootstrap and jQuery -->
@@ -12,6 +12,7 @@
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <!-- Our custom css -->
         <link rel="stylesheet" href="{{ URL::to('css/style.css') . "?v1.0" }}">
+        <link rel="stylesheet" href="{{ URL::to('css/jquery.dynatable.css')}}">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,6 +22,10 @@
         <![endif]-->
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ URL::to('js/jquery.dataTables.min.js')}}"></script>
+        <script src="{{ URL::to('js/shared.js')}}"></script>
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyAeSzS1e65KEZkl9ENwN83zAJ64HfuYrQ4"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization&.js"></script>
     </head>
     <body>
 
@@ -45,13 +50,14 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Ideas</a></li>
+                    <li class="active"><a href="/Issues">Ideas</a></li>
                     <li><a href="#">Community</a></li>
                     <li><a href="#">Sponsors</a></li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
                       <ul class="dropdown-menu">
                         <li><a href="#">Who We Are</a></li>
+                        <li><a href="#">How Issues Get Fixed</a></li>
                         <li><a href="#">How do Ideas Get Funded</a></li>
                       </ul>
                     </li>
