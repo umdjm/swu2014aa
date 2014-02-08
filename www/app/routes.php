@@ -15,3 +15,8 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/Issues', function()
+{
+	return View::make('issues.index');
+});
