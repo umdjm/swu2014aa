@@ -74,7 +74,7 @@
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="/issues">Issues</a></li>
                     <li><a href="#">Community</a></li>
