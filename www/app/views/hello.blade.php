@@ -56,6 +56,12 @@
 
 @stop
 
-@section('login')
+@section('footer')
+	<div class="container">
+		<div class="row">
+			<p>Footer here</p>
+		</div>
+	</div>
+
 	
 @stop
