@@ -1,6 +1,9 @@
 <?php
 
-class User extends Eloquent {
+use Illuminate\Auth\UserInterface;
+use Illuminate\Auth\Reminders\RemindableInterface;
+
+class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $guarded = array();
 
 	public static $rules = array();
@@ -19,5 +22,21 @@ class User extends Eloquent {
   {
       return $this->hasManyThrough('Issue', 'Track');
   }
+
+	/* Required for Laravel Auth */
+	protected $hidden = array('password');
+
+	public function getAuthIdentifier()
+	{
+	    return $this->getKey();
+	}
+	public function getAuthPassword()
+	{
+	    return $this->password;
+	}
+	public function getReminderEmail()
+    {
+        return $this->email;
+    }
 
 }

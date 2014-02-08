@@ -15,6 +15,6 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
-
+Route::post('login', 'UsersController@login');
 Route::resource('users', 'UsersController');
 Route::resource('issues', 'IssuesController');
