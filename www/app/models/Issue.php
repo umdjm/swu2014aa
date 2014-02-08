@@ -9,4 +9,15 @@ class Issue extends Eloquent {
 	{
 		return $this->belongsTo('User');
 	}
+
+  public function tracks()
+  {
+      return $this->hasMany('Track');
+  }
+
+  public function trackers()
+  {
+      return $this->hasManyThrough('User', 'Track');
+  }
 }
+
