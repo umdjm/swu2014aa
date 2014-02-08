@@ -4,9 +4,9 @@
 	<div>
 		<div>
 			<div id="capture">
-				<video id="video" autoplay width="300" height="300"></video>
+				<video id="video" autoplay></video>
 				<img id="snapshot" src=""></img>
-				<canvas id="canvas" style="display:none;" width="300" height="300"></canvas>
+				<canvas id="canvas" style="display:none;"></canvas>
 			</div>
 			<button id="capture-button" disabled>Take Picture</button>
 		</div>
@@ -21,19 +21,26 @@
                           navigator.mozGetUserMedia ||
                           navigator.msGetUserMedia;
 
-			var video = document.getElementById('video');
+			var $video = $('#video');
 			var image = document.getElementById('snapshot');
 			var canvas = document.getElementById('canvas');
 			var button = document.getElementById('capture-button');
 
 			var onSuccess = function(stream) {
-				video.src = window.URL.createObjectURL(stream);
+				$video.attr('src', window.URL.createObjectURL(stream));
 				button.disabled = false;
 
 				button.onclick =  function() {
-					console.log('clicked take picture');
+					var width = $video.width(),
+						height = $video.height();
+
+					console.log('(' + width + ', ' + height + ')');
+
 					var ctx = canvas.getContext('2d');
-					ctx.drawImage(video, 0, 0, 300, 300);
+					canvas.width = width;
+					canvas.height = height;
+
+					ctx.drawImage($video.get(0), 0, 0, width, height);
 					image.src = canvas.toDataURL('image/webp');
 				};
 			};
