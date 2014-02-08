@@ -52,7 +52,9 @@ class IssuesController extends BaseController {
 		}
 
 		$issue->save();
-		die("Receiving post");
+		return Redirect::to('issues/' . $issue->id);
+		// $redirect = Redirect::route('issues', $issue->id);
+		// die("Receiving post");
 	}
 
 	/**
