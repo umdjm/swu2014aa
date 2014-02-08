@@ -114,6 +114,10 @@ aside {
 .important-suw {
     text-transform: uppercase;
 }
+.important-suw a {
+	text-decoration: none;
+	background: transparent;
+}
 
 /*Pretty file upload*/
 .btn-file {
@@ -203,3 +207,4 @@ fieldset[disabled] .btn-custom.active {
 .box {
 	padding:8px;
 }
+

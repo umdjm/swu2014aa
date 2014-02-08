@@ -55,8 +55,8 @@
 
             <aside class=" brand-block notification-suw ">
         		<h1 class="h4 note-suw">Welcome to Fix Worthy! Want to get involved?</h1>
-                <button type="button" class="btn btn-primary btn-sm important-suw" role="button">Create An Idea</button>
-        		<!--<a class="pill-suw icn important-suw h4 notification-btn-suw create" href="/ideas/create">Create an Idea</a>-->
+                <button type="button" class="btn btn-primary btn-sm important-suw" role="button"><a href="{{ URL::to('issues/create')}}" >Create An Idea</a></button>
+        		
         	</aside>
 
             <nav id="page_header" class="block-suw navbar navbar-default" role="navigation">
