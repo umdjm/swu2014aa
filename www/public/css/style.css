@@ -120,6 +120,7 @@ aside {
     position: relative;
     overflow: hidden;
 }
+
 .btn-file input[type=file] {
     position: absolute;
     top: 0;
@@ -147,4 +148,25 @@ aside {
 #footer {
 	text-align: center;
 	padding:20px;
+}
+
+#signup {
+	color: #f3643c;
+}
+
+#signup a {
+	color: black;
+	text-decoration:none;
+}
+#signup a:hover {
+	
+}
+
+.border1 {
+	border: solid;
+}
+
+.form-actions {
+	margin:0;
+	text-align:center;
 }

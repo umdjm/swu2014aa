@@ -4,27 +4,26 @@
 	<div class="row">
 		<div class="col-xs-6 col-xs-offset-3">
 			<h3>Create New Issue</h3>
-			{{ Form::open(array('url' => 'issues', 'method' => 'POST', 'files' => true)) }}
+			{{ Form::open(array('role' => 'form', 'url' => 'issues', 'method' => 'POST', 'files' => true)) }}
 		        <fieldset>
-		            {{ Form::label('photo', 'Select or take a picture!') }}
-		            <p>
-		                <span class="btn btn-link btn-file">
-		                    <span class="btn-file-label">Browse for image...</span>{{ Form::file('photo', array('accept'=>'image/*')) }}
+		            <div class="form-group">
+		            	<img id="snapshot" class="img-responsive" src=""></img>
+		                <span class="btn btn-primary btn-file">
+		                    <span class="btn-file-label">Add a picture</span>
+		                    {{ Form::file('photo', array('accept'=>'image/*')) }}
 		                </span>
-		                <img id="snapshot" src=""></img>
-		            </p>
-
+		            </div>
 		            <div class="form-group">
 						{{ Form::label('name','Title') }}
-						{{ Form::text('name') }}
+						{{ Form::text('name', null, array('class' => 'form-control')) }}
 					</div>
 					<div class="form-group">
 						{{ Form::label('desc','Description') }}
-						{{ Form::textarea('desc') }}
+						{{ Form::textarea('desc', null, array('class' => 'form-control')) }}
 		            </div>
 		            
 		            <div class="form-group">
-		                {{ Form::submit('Save Issue', array('class'=>'btn btn-primary')) }}
+		                {{ Form::submit('Save Issue', array('class'=>'btn btn-primary pull-right')) }}
 		            </div>
 		        </fieldset>
 		    {{ Form::close() }}
