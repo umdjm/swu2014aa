@@ -25,3 +25,4 @@ Route::get('/Issues', function()
 	return View::make('issues.index');
 });
 Route::resource('users', 'UsersController');
+Route::resource('issues', 'IssuesController');
