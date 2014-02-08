@@ -1,3 +1,5 @@
+
+
 #map-div{
     width: 100%;
     height: 250px;
@@ -105,6 +107,12 @@ ul {
 aside {
     display: block;
 }
+
+.navbar-brand {
+	margin: 0px;
+	padding:10px;
+}
+
 
 .pill-suw {
     -moz-border-radius: 3px;
