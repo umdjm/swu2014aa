@@ -24,13 +24,12 @@
     </head>
     <body>
 
-            <aside class="inverted brand-block notification ">
-        		<h1 class="h4 note">Welcome to Fix Worthy! Want to get involved?</h1>
-        		<a class="pill icn important h4 notification-btn create" href="/ideas/create">Create an Idea</a>
-        		<a class="icn close" href="#">x</a>
+            <aside class=" brand-block notification-suw ">
+        		<h1 class="h4 note-suw">Welcome to Fix Worthy! Want to get involved?</h1>
+        		<a class="pill-suw icn important-suw h4 notification-btn-suw create" href="/ideas/create">Create an Idea</a>
         	</aside>
 
-            <nav id="page_header" class="block navbar navbar-default" role="navigation">
+            <nav id="page_header" class="block-suw navbar navbar-default" role="navigation">
               <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -55,6 +54,7 @@
                         <li><a href="#">How do Ideas Get Funded</a></li>
                       </ul>
                     </li>
+                    <li><a href="#login" data-toggle='modal'>Login</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
