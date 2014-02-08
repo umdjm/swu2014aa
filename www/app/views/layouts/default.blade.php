@@ -110,22 +110,23 @@
                     <div class="modal-body">
                         <form class="form-horizontal" role="form" method="POST" action="/login">
                             <div class="form-group">
-                                <label for="inputEmail" class="col-sm-2 col-lg-5 control-label">Email</label>
-                                    <div class="col-sm-10 col-lg-5">
+                                <label for="inputEmail" class="col-lg-5 col-md-5 control-label hidden-xs hidden-sm">Email</label>
+                                    <div class="col-sm-12 col-xs-12 col-lg-5 col-md-5">
                                       <input type="email" class="form-control" id="inputEmail" placeholder="email" name="email">
                                     </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword" class="col-sm-2 col-lg-5 control-label">Password</label>
-                                <div class="col-sm-10 col-lg-5">
+                                <label for="inputPassword" class="col-lg-5 col-md-5 control-label hidden-xs hidden-sm">Password</label>
+                                <div class="col-sm-12 col-xs-12 col-lg-5 col-md-5">
                                   <input type="password" class="form-control" id="inputPassword" placeholder="password" name="password">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-offset-1 col-sm-10 col-lg-5 col-lg-offset-4">
+                                <div class="form-actions ">
                                     <button type="submit" class="btn btn-primary">Login</button>
                                 </div>
                             </div>
+
                         </form>
                     </div>
 

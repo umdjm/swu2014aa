@@ -50,7 +50,8 @@ class IssuesController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('issues.show');
+				$issue = Issue::find($id);
+        return View::make('issues.show', array("issue" => $issue));
 	}
 
 	/**
