@@ -26,7 +26,8 @@
 
             <aside class=" brand-block notification-suw ">
         		<h1 class="h4 note-suw">Welcome to Fix Worthy! Want to get involved?</h1>
-        		<a class="pill-suw icn important-suw h4 notification-btn-suw create" href="/ideas/create">Create an Idea</a>
+                <button type="button" class="btn btn-primary important-suw" role="button">Create An Idea</button>
+        		<!--<a class="pill-suw icn important-suw h4 notification-btn-suw create" href="/ideas/create">Create an Idea</a>-->
         	</aside>
 
             <nav id="page_header" class="block-suw navbar navbar-default" role="navigation">
@@ -38,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="#">Fix Worthy</a>
+                  <a class="navbar-brand" href="/">Fix Worthy</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
