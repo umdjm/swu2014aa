@@ -11,7 +11,7 @@ $(document).on('change', '.btn-file :file', function() {
 
 $(document).ready( function() {
     $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
-        $(this).parent().children('.btn-file-label').text(label);
+        $(this).parent().children('.btn-file-label').text('Choose a different image...');
         if(supportsLocalFiles()) {
         	console.log("supports local files");
         	var reader = new FileReader();
