@@ -5,8 +5,8 @@ class User extends Eloquent {
 
 	public static $rules = array();
 
-  public function issues()
+  	public function issues()
 	{
-	    return $this->hasMany('Issue');
+		return $this->hasMany('Issue');
 	}
 }
