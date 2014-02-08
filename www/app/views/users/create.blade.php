@@ -1,8 +1,9 @@
-@extends('layout.default')
+@extends('layouts.default')
 
-<p> Create a user here. </p>
+@section('content')
+<h1> Create a user here. </h1>
 
-<form action="">
+<form method="POST" action="/users">
 	<label>email:</label>
 	<input type="email" name="email" placeholder="email address">
 	<label>password:</label>
@@ -11,3 +12,4 @@
 	<input type="password" name="reenter-password" placeholder="re-enter password">
 	<input type="submit">
 </form>
+@stop
