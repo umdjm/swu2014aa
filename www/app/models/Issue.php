@@ -17,7 +17,7 @@ class Issue extends Eloquent {
 
   public function trackers()
   {
-      return $this->hasManyThrough('Post', 'User');
+      return $this->hasManyThrough('User', 'Track');
   }
 }
 
