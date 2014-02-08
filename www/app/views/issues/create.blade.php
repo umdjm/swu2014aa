@@ -17,10 +17,21 @@
 		                    {{ Form::file('photo', array('accept'=>'image/*')) }}
 		                </span>
 		            </div>
-		            <div class="form-group">
-						{{ Form::label('name','Title') }}
-						{{ Form::text('name', null, array('class' => 'form-control')) }}
-					</div>
+            <div class="form-group">
+							{{ Form::label('name','Title') }}
+							{{ Form::text('name', null, array('class' => 'form-control')) }}
+						</div>
+
+            <div class="form-group">
+							{{ Form::label('priority','Priority') }}
+							{{ Form::radio('priority', 3, true) }}
+							Low
+							{{ Form::radio('priority', 2) }}
+							Medium
+							{{ Form::radio('priority', 1) }}
+							High
+						</div>
+
 					<div class="form-group">
 						{{ Form::label('desc','Description') }}
 						{{ Form::textarea('desc', null, array('class' => 'form-control')) }}

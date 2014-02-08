@@ -12,7 +12,7 @@
 <div id="map-row" class="row">
   <div class="col-md-4">
   <p>
-      Community
+      Location
       <select class="form-control">
         <option>Ann Arbor</option>
         <option>Plymouth/Canton</option>

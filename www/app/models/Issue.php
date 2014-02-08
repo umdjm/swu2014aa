@@ -19,5 +19,12 @@ class Issue extends Eloquent {
   {
       return $this->hasManyThrough('User', 'Track');
   }
+
+  public function priority_string()
+  {
+    if ($this->priority == 1 ) return "High";
+    elseif ($this->priority == 2 ) return "Medium";
+    else return "Low";
+  }
 }
 
