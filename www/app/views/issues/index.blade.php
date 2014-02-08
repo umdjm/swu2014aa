@@ -12,10 +12,10 @@
      <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" class="img-rounded"> </img>
   </div>
   <div class="col-md-5">
-      <h3 id="issue-title">Pothole on Amherst</h3>
-      <p id="issue-address">16011 Amherst, Beverly Hills MI </p>
-      <p id="issue-description">The pothole on Amherst wrecked my car and I can't get the city to respond. </p>
-      <p><a class="btn btn-primary btn-lg" role="button">Endorse <span id="issue-votes" class="badge">42</span></a></p>
+      <h3 id="issue-title"></h3>
+      <p id="issue-address"> </p>
+      <p id="issue-description"></p>
+      <p><a class="btn btn-primary btn-lg" role="button">Endorse <span id="issue-votes" class="badge"></span></a></p>
   </div>
 </div>
 
@@ -46,7 +46,7 @@ function initData()
       ];
       initMap();
       initTable();
-
+      GetLocationFromIP();
 }
 
 function initTable()
@@ -67,6 +67,7 @@ function initTable()
         }
     });
     $('#dc-data-table tbody tr').click(chooseIssue);
+    $('#dc-data-table tbody tr:nth-child(1)').click();
 }
 function chooseIssue(event)
 {
@@ -83,7 +84,7 @@ function initMap() {
 
   var centerPos = new google.maps.LatLng(42.4864196243879135, -83.2806066962856802);
   var mapOptions = {
-    zoom: 10,
+    zoom: 8,
     center: centerPos,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     mapTypeControl: false,

@@ -22,7 +22,9 @@
         <![endif]-->
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script src="{{ URL::to('sjs/jquery.dataTables.min.js')}}"></script>
+        <script src="{{ URL::to('js/jquery.dataTables.min.js')}}"></script>
+        <script src="{{ URL::to('js/shared.js')}}"></script>
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyAeSzS1e65KEZkl9ENwN83zAJ64HfuYrQ4"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization&.js"></script>
     </head>
     <body>
