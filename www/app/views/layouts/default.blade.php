@@ -74,7 +74,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="/Issues">Ideas</a></li>
+                    <li class="active"><a href="/issues">Issues</a></li>
                     <li><a href="#">Community</a></li>
                     <li><a href="#">Sponsors</a></li>
                     <li class="dropdown">
