@@ -26,8 +26,32 @@
         <script src="{{ URL::to('js/shared.js')}}"></script>
         <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyAeSzS1e65KEZkl9ENwN83zAJ64HfuYrQ4"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization&.js"></script>
+        <!-- Noty -->
+        <script type="text/javascript" src="{{ URL::to('js/noty/packaged/jquery.noty.packaged.min.js') }}"></script>
     </head>
     <body>
+
+            @if(Session::has('flash_success'))
+                <script>
+                    var n = noty({ 
+                        text: "{{ Session::get('flash_success') }}",
+                        type: "success",
+                        timeout: 5000,
+                        closeWith: ['click', 'hover']
+                    });
+                </script>
+            @endif
+
+            @if (Session::has('flash_error'))
+                <script>
+                    var n = noty({ 
+                        text: "{{ Session::get('flash_error') }}",
+                        type: "error",
+                        timeout: 5000,
+                        closeWith: ['click', 'hover']
+                    });
+                </script>
+            @endif
 
             <aside class=" brand-block notification-suw ">
         		<h1 class="h4 note-suw">Welcome to Fix Worthy! Want to get involved?</h1>
@@ -84,17 +108,17 @@
                     </div>
 
                     <div class="modal-body">
-                        <form class="form-horizontal" role="form" method="" action="">
+                        <form class="form-horizontal" role="form" method="POST" action="/login">
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-5 col-md-5 control-label hidden-xs hidden-sm">Email</label>
                                     <div class="col-sm-12 col-xs-12 col-lg-5 col-md-5">
-                                      <input type="email" class="form-control" id="inputEmail" placeholder="email">
+                                      <input type="email" class="form-control" id="inputEmail" placeholder="email" name="email">
                                     </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword" class="col-lg-5 col-md-5 control-label hidden-xs hidden-sm">Password</label>
                                 <div class="col-sm-12 col-xs-12 col-lg-5 col-md-5">
-                                  <input type="password" class="form-control" id="inputPassword" placeholder="password">
+                                  <input type="password" class="form-control" id="inputPassword" placeholder="password" name="password">
                                 </div>
                             </div>
                             <div class="form-group">
