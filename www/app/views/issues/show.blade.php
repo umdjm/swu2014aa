@@ -26,15 +26,19 @@
 			                ->where('issue_id', '=', $issue->id)
 			                ->first(); ?>
 						{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks/' . $track->id, 'method' => 'DELETE')) }}
-							{{ Form::submit('Endorsed', array('class'=>'issue-btn btn-endorsed issue-field-spacing btn btn-primary')) }}
-                            <span><i class="fa fa-thumbs-up"> </i>{{ $issue->get_tracking_count() }} </span>
+							<button type="submit" class="issue-btn btn-endorsed issue-field-spacing btn btn-primary">
+								Endorsed
+								<span class="badge pull-right badge-endorsed"><i class="fa fa-thumbs-up"></i>&nbsp;{{ $issue->get_tracking_count() }}</span>
+							</button>
 				    {{ Form::close() }}
 					@else
 						{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks', 'method' => 'POST')) }}
-			        {{ Form::hidden('issue_id', $issue->id, array('id' => 'issue_id')) }}
-							{{ Form::submit('Endorse', array('class'=>'issue-btn issue-field-spacing btn btn-primary')) }}
-                            <span><i class="fa fa-thumbs-up"> </i>{{ $issue->get_tracking_count() }}</span>
-				    {{ Form::close() }}
+			        		{{ Form::hidden('issue_id', $issue->id, array('id' => 'issue_id')) }}
+			        		<button type="submit" class="issue-btn issue-field-spacing btn btn-primary">
+								Endorse
+								<span class="badge pull-right"><i class="fa fa-thumbs-up"></i>&nbsp;{{ $issue->get_tracking_count() }}</span>
+			        		</button>
+				    	{{ Form::close() }}
 					@endif
 
                  @endif

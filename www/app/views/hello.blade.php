@@ -14,7 +14,7 @@
 	    <div class="container" id="introduction">
 	    	<div class="row">
 	    		<div class="row" id="about">
-	    			<h2>How it works for students</h2>
+	    			<h2>How it works for students and staff</h2>
 	    		</div>
 	    		<div class="row">
 		    		<div class="col-lg-4 col-md-4 box">
@@ -22,21 +22,21 @@
 		    				<img src="{{ URL::to('media/1-issue.png') }}" alt="Picture 1" class="img-rounded img-responsive" />
 		    			</div>
 		    			<h3>Find an issue</h3>
-		    			<p>Do you have an issue that is FixWorthy? Maybe you've got a cockroach problem in your dorm shower or a broken door knob. We know you experience issues on your campus and you want to send proof to those who can solve that problem.</p>
+		    			<p>Do you have an issue that is FixWorthy? Maybe you've got a cockroach problem in your dorm shower or a broken door knob. We know you experience issues on campus and you want to send proof to the problem solvers.</p>
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 box">
 		    			<div class="round-img">
 		    				<img src="{{ URL::to('media/2-take-a-pic.png') }}" alt="Picture 1" class="img-rounded img-responsive" style="margin:0 auto;"/>
 		    			</div>
 		    			<h3>Take a pic</h3>
-		    			<p>Show us your issue. Take a pic or upload a photo and post the issue. You can follow and view other issues around campus and track their progress.</p>
+		    			<p>Show us your issue by taking a pic or uploading a photo then view, follow, and discuss other issues around campus.</p>
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 box">
 		    			<div class="round-img">
 		    				<img src="{{ URL::to('media/3-get-it-solved.png') }}" alt="Picture 1" class="img-rounded img-responsive" style="margin:0 auto;"/>
 		    			</div>
 		    			<h3>Get your issues solved!</h3>
-		    			<p>We want to help make your troubles go away. Once your issue has been fixed, you will be notified and the issue will be closed.</p>
+		    			<p>We want to help make your troubles go away. Once the issue has been fixed, you'll be notified and the issue will be closed!</p>
 		    		</div>
 		    	</div>
 	    	</div>
@@ -52,15 +52,15 @@
 		    			<div class="round-img">
 		    				<img src="{{ URL::to('media/1-review-issues.png') }}" alt="Picture 1" class="img-rounded img-responsive" style="margin:0 auto;"/>
 		    			</div>
-		    			<h3>Collect your issues</h3>
-		    			<p>Browse the gallery of issues submitted by students.</p>
+		    			<h3>Organize your issues</h3>
+		    			<p>Review and prioritize the issues your students and staff submit in real-time.</p>
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 box">
 		    			<div class="round-img">
 		    				<img src="{{ URL::to('media/2-assign-track-analyze.png') }}" alt="Picture 1" class="img-rounded img-responsive" style="margin:0 auto;"/>
 		    			</div>
 		    			<h3>Assign & Track</h3>
-		    			<p>Assign tasks to maintenance professionals and track thier progress using our sophisticated analytics dashboard.</p>
+		    			<p>Assign tasks to maintenance professionals and track progress using our analytics dashboard.</p>
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 box">
 		    			<div class="round-img">
@@ -82,20 +82,32 @@
 	 		<h1>Pricing</h1>
 	 	</div>
 	 	<div class="row">
+	 		<div class="hidden-lg hidden-md">
+	 			<hr>
+	 		</div>
 	 		<div class="col-lg-3">
-	 			<h4>Less than 2,000 students</h4>
+	 			<h4>Under 2,000 Students</h4>
 	 			<h2>Free!</h2>
 	 		</div>
+	 		<div class="hidden-lg hidden-md">
+	 			<hr>
+	 		</div>
 	 		<div class="col-lg-3">
-	 			<h4>Less than 10,000 students</h4>
+	 			<h4>Under 10,000 Students</h4>
 	 			<h2>$200 / month</h2>
 	 		</div>
-	 		<div class="col-lg-3">
-	 			<h4>Less than 20,000 students</h4>
-	 			<h2>$400 / month</h2>
+	 		<div class="hidden-lg hidden-md">
+	 			<hr>
 	 		</div>
 	 		<div class="col-lg-3">
-	 			<h4>More than 10,000 students</h4>
+	 			<h4>Under 20,000 Students</h4>
+	 			<h2>$400 / month</h2>
+	 		</div>
+	 		<div class="hidden-lg hidden-md">
+	 			<hr>
+	 		</div>
+	 		<div class="col-lg-3">
+	 			<h4>Over 20,000 Students</h4>
 	 			<h2>$550 / month</h2>
 	 		</div>
 	 	</div>

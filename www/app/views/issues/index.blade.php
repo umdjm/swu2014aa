@@ -54,7 +54,7 @@
 
 <ul class="nav nav-tabs">
   <li class="active"><a href="#all" data-toggle="tab">All</a></li>
-  <li><a href="#following" data-toggle="tab">Following</a></li>
+  <li><a href="#following" data-toggle="tab">Endorsed</a></li>
   <li><a href="#my-issues" data-toggle="tab">My Issues</a></li>
 </ul>
 

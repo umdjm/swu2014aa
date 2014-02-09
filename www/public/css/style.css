@@ -408,3 +408,7 @@ img {
     text-align: center;
 }
 
+.badge-endorsed {
+    color: #d3d3d3 !important;
+}
+
