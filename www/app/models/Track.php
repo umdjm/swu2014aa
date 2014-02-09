@@ -14,5 +14,4 @@ class Track extends Eloquent {
 	{
 	    return $this->belongsTo('Issue');
 	}
-
 }

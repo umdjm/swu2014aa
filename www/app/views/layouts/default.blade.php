@@ -29,6 +29,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="{{ URL::to('js/jquery.dataTables.min.js')}}"></script>
         <script src="{{ URL::to('js/shared.js')}}"></script>
+        <script src="{{ URL::to('js/masonry.js')}}"></script>
         <script src="{{ URL::to('js/geolocate.js')}}"></script>
         <script src="{{ URL::to('js/crossfilter.js')}}"></script>
         <script src="{{ URL::to('js/d3.js')}}"></script>
@@ -80,13 +81,13 @@
                         <ul class="nav navbar-nav">
                         
                         @if(Auth::check())
-                            <li class='active'><a href="/issues/create">Post An Issue</a></li>
+                            <li><a href="/issues/create">Post An Issue</a></li>
                             <li><a href="#contact">Contact</a></li>
                             <li><a href="/issues">Profile</a></li>
                             <li><a href="{{ Url::to('logout') }}">Logout</a></li>
 
                         @else
-                            <li class='active'><a href="#get-started">Get Started</a></li>
+                            <li><a href="#get-started">Get Started</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#pricing">Pricing</a></li>
                             <li><a href="#contact">Contact</a></li>
@@ -106,15 +107,18 @@
         
         <div id="contact" class="container">
             <div class="row">
-                <br />
-                <div class="col-lg-4">
+                <hr>
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <p>Contact 1</p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <p>Contact 1</p>
                 </div>
-                <div class="col-lg-4">
-                    <p>Contact 1</p>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <ul>
+                        <li><img src="{{ URL::to('media/24/Twitter.png')}}" class="img-rounded" /><a href="http://twitter.com/FixWorthy">@FixWorthy</a></li>
+                        <li><img src="{{ URL::to('media/24/Instagram.png')}}" class="img-rounded" />Instagram</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -123,8 +127,8 @@
         <div id="footer">
             <div class="container" id="footer">
                 <div class="row">
-                    <br />
-                    <p>&copy; FixWorthy 2014</p>
+                    <hr>
+                    <p>Copyright &copy; FixWorthy 2014. All Rights Reserved</p>
                 </div>
             </div>
         </div>

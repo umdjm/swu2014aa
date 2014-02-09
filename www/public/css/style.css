@@ -1,4 +1,30 @@
+#search-box{
+width: 80%;
+}
 
+.issue-header{
+    margin: 20px 0px;
+}
+
+.btn-selected{
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.item {
+    width: 25%;
+    color: white;
+    background: white;
+    border: 1px solid #CCCDCE;
+}
+.issue-name {
+    color: #0088CC;
+    font-size: 16px;
+    height:30px;
+}
+.item img {
+   width: 100%;
+}
 .col-centered{
     text-align: center;
     float: none;
@@ -283,4 +309,12 @@ fieldset[disabled] .btn-custom.active {
 
 #content {
 	padding-top:50px;
+}
+
+.row {
+    margin: 0px;
+}
+
+img {
+    max-width: 100%;
 }

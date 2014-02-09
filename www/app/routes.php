@@ -27,4 +27,6 @@ Route::group(array('before' => 'auth'), function()
 	Route::get('logout', 'UsersController@logout');
 	Route::resource('issues', 'IssuesController');
 	Route::post('comments', 'CommentsController@store');
+	Route::resource('tracks', 'TracksController');
 });
+

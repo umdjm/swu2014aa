@@ -58,7 +58,7 @@
 		    	</div>
 	    	</div>
 
-	    	<div class="row">
+	    	<div class="row hidden-xs hidden-sm">
 	    		<div class="row">
 	    			<div class="row" id="pricing">
 	    				<h2 id="pricing">Pricing</h2>
@@ -66,7 +66,6 @@
 	    		</div>
 	    		<div class="row">
 		    		<div class="col-lg-12 col-md-12 box">
-		    			<h3>Column 1</h3>
 		    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies, lorem vel viverra euismod, elit velit malesuada lectus, vitae facilisis tellus odio eu risus. Curabitur lobortis vulputate sem et convallis. Phasellus non sapien id nunc adipiscing consequat sed vitae erat. Morbi vel tortor leo. Nunc quis nulla augue. Nulla pretium ac neque a sollicitudin. Duis sagittis non lectus ac lobortis. Duis volutpat, orci sed vestibulum feugiat, lectus lectus scelerisque sem, ac porta nulla tellus ac enim. Phasellus egestas quam eget fermentum tristique. Duis a semper dolor, ut aliquam purus. Morbi vulputate nisl eu sem volutpat pretium.</p>
 		    		</div>
 		    		
