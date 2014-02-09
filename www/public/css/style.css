@@ -1,4 +1,9 @@
 
+.col-centered{
+    text-align: center;
+    float: none;
+    margin: 0 auto;
+}
 
 #map-div{
     width: 100%;
