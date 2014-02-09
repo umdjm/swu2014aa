@@ -85,10 +85,11 @@
                         
                         @if(Auth::check())
                             <li><a href="/issues/create">Submit</a></li>
-                            <li><a href="/issues?following=true">Following</a></li>
-                            <li><a href="/issues">All</a></li>
+                            <li><a href="/issues">View Issues</a></li>
+                            @if(Auth::user()->isAdmin())
+                                <li><a href="/reports">Reports</a></li>
+                            @endif
                             <li><a href="{{ Url::to('logout') }}">Logout</a></li>
-
                         @else
                             <li><a href="#get-started">Get Started</a></li>
                             <li><a href="#about">About</a></li>
@@ -111,17 +112,25 @@
         <div id="contact" class="container">
             <div class="row">
                 <hr>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <p>Contact 1</p>
+                <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-6 col-xs-12 text-muted centered">
+                    <div id="address-box">
+                        <address>
+                            <strong>FixWorthy</strong><br>
+                            100 Palmer Commons<br>
+                            Ann Arbor, MI 48103<br>
+                            <abbr title="Phone">P:</abbr>918.685.0032<br>
+                            <abbr title="Email">E:</abbr><a href="mailto:support@fixowrthy.co">support@fixworthy.co</a>
+                        </address>
+                    </div>
+
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <p>Contact 1</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <ul>
-                        <li><img src="{{ URL::to('media/24/Twitter.png')}}" class="img-rounded" /><a href="http://twitter.com/FixWorthy">@FixWorthy</a></li>
-                        <li><img src="{{ URL::to('media/24/Instagram.png')}}" class="img-rounded" />Instagram</li>
-                    </ul>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-sm-6 text-muted hidden-xs">
+                    <div id="address-box">
+                        <address class="pull-right">
+                            <i class="fa fa-twitter" title="Twitter"></i>&nbsp;<a href="http://twitter.com/fixworthy">@fixworthy</a><br>
+                            <i class="fa fa-instagram" title="Instagram"></i>&nbsp;<a href="http://instagram.com/fixwothy">fixworthy</a>
+                        </address>
+                    </div>
                 </div>
             </div>
         </div>

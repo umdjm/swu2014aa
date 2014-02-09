@@ -1,46 +1,66 @@
 @extends('layouts.default')
 
 @section('content')
+<div id="issue-reports">
+    <h1>Issues Analytics Dashboard</h1>
 
-<div class="row">
-  <div class="col-md-4">
-       <h4>Issue Types</h4>
-        <div id="typeChart" ></div>
-  </div>
-  <div class="col-md-4">
-       <h4>Departments</h4>
-        <div id="deptChart" ></div>
-  </div>
-  <div class="col-md-4">
-       <h4>Issue Owner</h4>
-        <div id="ownerChart" ></div>
-  </div>
+    <div class="row" id="analytics-overview">
+        <div class="col-md-4 analytics-highlight">
+            <h2>
+                <strong>Active Users:</strong> {{ User::count() }}
+            </h2>
+        </div>
+        <div class="col-md-4 analytics-highlight">
+            <h2>
+                <strong>Open Issues:</strong> {{ Issue::openCount() }}
+            </h2>
+        </div>
+        <div class="col-md-4 analytics-highlight">
+            <h2>
+                <strong>Closed Issues:</strong> {{ Issue::closedCount() }}
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+           <h4>Issue Types</h4>
+            <div id="typeChart" ></div>
+      </div>
+      <div class="col-md-4">
+           <h4>Departments</h4>
+            <div id="deptChart" ></div>
+      </div>
+      <div class="col-md-4">
+           <h4>Issue Owner</h4>
+            <div id="ownerChart" ></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+           <h4>Issue Status</h4>
+            <div id="statusChart" ></div>
+      </div>
+      <div class="col-md-6">
+           <h4>Days Open</h4>
+            <div id="daysOpenChart" ></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+           <h4>Date Opened</h4>
+            <div id="dateChart" ></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 col-centered">
+        <button type="button" class="btn btn-info reset" onclick="javascript:dc.filterAll();dc.redrawAll();">Clear Filters</button>
+      </div>
+    </div>
 </div>
-
-<div class="row">
-  <div class="col-md-6">
-       <h4>Issue Status</h4>
-        <div id="statusChart" ></div>
-  </div>
-  <div class="col-md-6">
-       <h4>Days Open</h4>
-        <div id="daysOpenChart" ></div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
-       <h4>Date Opened</h4>
-        <div id="dateChart" ></div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12 col-centered">
-    <button type="button" class="btn btn-info reset" onclick="javascript:dc.filterAll();dc.redrawAll();">Clear Filters</button>
-  </div>
-</div>
-
 
 <script>
 

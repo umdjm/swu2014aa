@@ -20,11 +20,12 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
   public function tracked_issues()
   {
-
   		$tracks = $this->tracks;
   		$trackedIssues = array();
   		foreach($tracks as $track){
-  			array_push($trackedIssues, $track->issue);
+  			if($track->issue->status != 'closed'){
+  				array_push($trackedIssues, $track->issue);
+  			}
   		}
   		return $trackedIssues;
   }
@@ -48,4 +49,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function canEdit($issue) {
 		return $this->role == 'admin' || $issue->user_id == $this->id;
 	}    
+
+	public function isAdmin()
+	{
+		 return ($this->role == "admin");
+	}
 }

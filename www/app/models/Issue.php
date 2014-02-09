@@ -41,5 +41,22 @@ class Issue extends Eloquent {
     if (count($tracked) == 0) return false;
     else return true;
   }
+
+  public function get_tracking_count() 
+  {
+    return DB::table('tracks')
+      ->where('issue_id', '=', $this->id)
+      ->count();
+  }
+
+  public static function openCount()
+  {
+    return Issue::where('status', '<>', 'closed')->count();
+  } 
+
+  public static function closedCount()
+  {
+    return Issue::where('status', '=', 'closed')->count();
+  } 
 }
 
