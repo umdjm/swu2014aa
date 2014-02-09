@@ -20,6 +20,11 @@ class Issue extends Eloquent {
       return $this->hasManyThrough('User', 'Track');
   }
 
+  public function comments()
+  {
+      return $this->hasMany('Comment');
+  }
+
   public function priority_string()
   {
     if ($this->priority == 1 ) return "High";
