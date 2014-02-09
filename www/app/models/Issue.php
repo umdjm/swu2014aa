@@ -31,5 +31,15 @@ class Issue extends Eloquent {
     elseif ($this->priority == 2 ) return "Medium";
     else return "Low";
   }
+
+  public function is_tracked_by_user()
+  {
+    $tracked = DB::table('tracks')
+                  ->where('user_id', '=', Auth::user()->id)
+                  ->where('issue_id', '=', $this->id)
+                  ->get();
+    if (count($tracked) == 0) return false;
+    else return true;
+  }
 }
 

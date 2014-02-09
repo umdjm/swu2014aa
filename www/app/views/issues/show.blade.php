@@ -6,6 +6,21 @@
 			<div class="col-md-6 col-md-offset-3">
 				<h3>
 					{{ $issue->name }}
+
+					@if ($issue->is_tracked_by_user())
+						<?php $track = Track::where('user_id', '=', Auth::user()->id)
+			                ->where('issue_id', '=', $issue->id)
+			                ->first(); ?>
+						{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks/' . $track->id, 'method' => 'DELETE')) }}
+							{{ Form::submit('Unfollow', array('class'=>'btn btn-primary pull-right')) }}
+				    {{ Form::close() }}
+					@else 
+						{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks', 'method' => 'POST')) }}
+			        {{ Form::hidden('issue_id', $issue->id, array('id' => 'issue_id')) }}
+							{{ Form::submit('Follow', array('class'=>'btn btn-primary pull-right')) }}
+				    {{ Form::close() }}
+					@endif
+
 					@if( Auth::user()->canEdit($issue) )
 						<a href="{{ URL::to( '/issues/' . $issue->id . '/edit' ) }}" class="btn btn-primary btn-large pull-right">
 						<i class="fa fa-pencil-square-o"></i>
