@@ -18,16 +18,19 @@
 	    		</div>
 	    		<div class="row">
 		    		<div class="col-lg-4 col-md-4 box">
+		    			<img src="{{ URL::to('media/1-issue.png') }}" alt="Picture 1" class="img-rounded img-responsive" style="margin:0 auto;"/>
 		    			<h3>Column 1</h3>
-		    			<img src='' alt="Picture 1" class="img-rounded"/>
+		    			<p>Talking stuffs</p>
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 box">
-		    			<h3>Column 2</h3>
-		    			<p>Suspendisse at orci in nisi pellentesque tincidunt ac vel quam. Sed fermentum rutrum enim quis egestas. Nullam sodales pharetra nibh, et volutpat leo. Nulla scelerisque magna felis, ut facilisis lorem tristique a. Nunc vitae ante ultrices, imperdiet felis quis, semper velit. Nulla commodo, tortor nec porttitor vehicula, mi velit egestas orci, ac ultricies mauris orci vitae dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat, enim in hendrerit gravida, mauris metus varius tellus, quis sagittis purus metus ac libero. Phasellus quis erat elit. Integer at bibendum metus. Suspendisse vel massa nisi. Sed posuere id enim eget elementum.</p>
+		    			<img src="{{ URL::to('media/2-take-a-pic.png') }}" alt="Picture 1" class="img-rounded img-responsive" style="margin:0 auto;"/>
+		    			<h3>Column 1</h3>
+		    			<p>Talking stuffs</p>
 		    		</div>
 		    		<div class="col-lg-4 col-md-4 box">
-		    			<h3>Column 3</h3>
-		    			<p>Vestibulum eget volutpat mauris. Fusce gravida nunc nec purus fringilla, et sollicitudin diam volutpat. Mauris odio risus, tincidunt ut quam sed, facilisis commodo est. Phasellus adipiscing lacus vitae nulla mollis, eu luctus purus molestie. Pellentesque massa quam, luctus a sodales congue, malesuada tincidunt velit. Phasellus ultrices tincidunt ante, eu congue elit blandit pretium. Cras consectetur ultricies nisl, eget congue arcu pulvinar in. Aenean ac lectus sed neque adipiscing mattis. In hac habitasse platea dictumst. Mauris commodo nisl at interdum auctor. Aliquam aliquam purus id leo fringilla, in aliquet mi dictum. Ut sodales dui et dignissim dictum. Suspendisse ullamcorper ante a pulvinar iaculis. Aliquam sit amet libero vel nunc vestibulum dapibus.</p>
+		    			<img src="{{ URL::to('media/3-get-it-solved.png') }}" alt="Picture 1" class="img-rounded img-responsive" style="margin:0 auto;"/>
+		    			<h3>Column 1</h3>
+		    			<p>Talking stuffs</p>
 		    		</div>
 		    	</div>
 	    	</div>
