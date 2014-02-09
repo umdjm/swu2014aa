@@ -16,16 +16,14 @@ Route::get('/', function()
 	return View::make('hello');
 });
 Route::post('login', 'UsersController@login');
-Route::get('users/create', array('uses' => 'UsersController@create'));
-Route::post('users', array('uses' => 'UsersController@store'));
+Route::resource('users', 'UsersController');
 
-// Route::group(array('before' => 'auth'), function()
-// {
+Route::group(array('before' => 'auth'), function()
+{
 	Route::get('/reports', function()
 	{
 		return View::make('issues.reports');
 	});
 	Route::get('logout', 'UsersController@logout');
-	Route::resource('users', 'UsersController');
 	Route::resource('issues', 'IssuesController');
-// });
+});

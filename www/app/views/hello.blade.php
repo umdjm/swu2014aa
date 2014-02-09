@@ -7,6 +7,7 @@
 
 	        <!--<a href="." class="cta-btn-suw pill-suw h2">How It Works</a>-->
 	        <button type="button" id="signup" class="btn-xlarge btn-custom" onclick="location.href='/users/create'">Get Started</button>
+	        <!-- <a href="{{ URL::to('users/create') }}" class="btn-xlarge btn-custom">Get Started</a> -->
 
 	    </div>
 
