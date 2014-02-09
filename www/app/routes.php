@@ -21,6 +21,6 @@ Route::get('/reports', function()
 	return View::make('issues.reports');
 });
 Route::post('login', 'UsersController@login');
-Route::get('logout', array('uses' => 'UsersController@logout', 'as' => 'logout'))->before('auth');
+Route::get('logout', 'UsersController@logout');
 Route::resource('users', 'UsersController');
 Route::resource('issues', 'IssuesController');

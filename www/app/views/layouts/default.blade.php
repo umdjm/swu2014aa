@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Fix Worthy</title>
-        <link rel="shortcut icon" href="{{ URL::to('img/favicon.png') }}" />
+        <link rel="shortcut icon" href="{{ URL::to('favicon.ico') }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- TODO: Add local fallback for bootstrap and jQuery -->
         <!-- Bootstrap CSS -->
@@ -58,11 +58,6 @@
                 </script>
             @endif
 
-            <aside class=" brand-block notification-suw ">
-        		<h1 class="h4 note-suw">Welcome to Fix Worthy! Want to get involved?</h1>
-                <button type="button" class="btn btn-primary btn-sm important-suw" role="button"><a href="{{ URL::to('issues/create')}}" >Create An Idea</a></button>
-        		
-        	</aside>
 
             <nav id="page_header" class="block-suw navbar navbar-default" role="navigation">
               <div class="container-fluid">
@@ -73,11 +68,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="/">Fix Worthy</a>
+                  <a class="navbar-brand" href="/"><img src="{{ URL::to('/FW-logo.png')}}" /img></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="/issues">Issues</a></li>
                     <li><a href="#">Community</a></li>
@@ -90,7 +85,11 @@
                         <li><a href="#">How do Ideas Get Funded</a></li>
                       </ul>
                     </li>
-                    <li><a href="#login" data-toggle='modal'>Login</a></li>
+                    @if(Auth::check())
+                        <li><a href="{{ Url::to('logout') }}">Logout</a></li>
+                    @else
+                        <li><a href="#login" data-toggle='modal'>Login</a></li>
+                    @endif
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
@@ -104,7 +103,7 @@
         </div>
 
         <!-- login modal -->
-        <div class="modal" id="login">
+        <div class="modal fade" id="login">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">

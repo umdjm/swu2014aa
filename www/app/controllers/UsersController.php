@@ -29,7 +29,18 @@ class UsersController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$pwd = Input::get("password");
+		if( strcmp($pwd, Input::get("reenter-password")) != 0) {
+			return Redirect::back()->with('flash_error', "Passwords do not match")->withInput();
+		}
+
+		$user = new User();	
+		$user->name = Input::get("name");
+		$user->email = Input::get("email");
+		$user->password = Hash::make($pwd);
+
+		$user->save();
+		return Redirect::to('/issues');
 	}
 
 	/**
@@ -91,7 +102,7 @@ class UsersController extends BaseController {
 	public function logout() {
 	    Auth::logout();
 
-	    return Redirect::route('/')
+	    return Redirect::to('/')
 	        ->with('flash_success', 'You are successfully logged out.');
 	}
 
