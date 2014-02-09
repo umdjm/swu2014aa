@@ -1,21 +1,47 @@
 @extends('layouts.default')
 
 @section('content')
-	<div class="row">
-		<div class="col-xs-6 col-xs-offset-3">
-			<h3>{{ $issue->name }}</h3>
-			<div id="google-map"></div>
-			<img src="{{ $issue->photo }}" alt="" class="img-responsive"></img>
-			<div>
-				<p>{{ $issue->desc }}</p>
-				<p class="priority{xp">{{ $issue->priority_string() }} Priority
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h3>
+					{{ $issue->name }}
+					@if( Auth::user()->canEdit($issue) )
+						<a href="{{ URL::to( '/issues/' . $issue->id . '/edit' ) }}" class="btn btn-primary btn-large pull-right">
+						<i class="fa fa-pencil-square-o"></i>
+						Edit
+					@endif
+				</a>
+				</h3>
+				<img src="{{ $issue->photo }}" alt="" class="img-responsive"></img>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div id="google-map"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
 				<p>
+					<span></span>
 					Submitted by 
 					<span>{{ $issue->user->name }}</span>
 				</p>
+				@include('partials/issue-status', array('issue'=>$issue))
 			</div>	
-		</div>	
-	</div>	
+		</div>
+		<div class="row">
+		 	<div class="col-md-6 col-md-offset-3">
+				{{ $issue->desc }}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				@include('partials.comments', array('issue_id' => $issue->id, 'comments' => $issue->comments))
+			</div>
+		</div>
+	</div>
 	<script>
 		function initMap() {
 			var marker;
