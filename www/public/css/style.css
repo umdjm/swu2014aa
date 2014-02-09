@@ -270,3 +270,7 @@ fieldset[disabled] .btn-custom.active {
     color: #a4bd14; /*yellowgreen*/
 }
 
+.modal-header {
+	background-color: #f3643c;
+	color: white;
+}

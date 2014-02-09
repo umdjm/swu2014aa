@@ -15,6 +15,11 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/reports', function()
+{
+	return View::make('issues.reports');
+});
 Route::post('login', 'UsersController@login');
 Route::get('logout', 'UsersController@logout');
 Route::resource('users', 'UsersController');

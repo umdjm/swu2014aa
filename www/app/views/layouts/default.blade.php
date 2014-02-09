@@ -13,6 +13,7 @@
         <!-- Our custom css -->
         <link rel="stylesheet" href="{{ URL::to('css/style.css') . "?v1.0" }}">
         <link rel="stylesheet" href="{{ URL::to('css/jquery.dynatable.css')}}">
+        <link rel="stylesheet" href="{{ URL::to('css/dc.css')}}">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,6 +26,9 @@
         <script src="{{ URL::to('js/jquery.dataTables.min.js')}}"></script>
         <script src="{{ URL::to('js/shared.js')}}"></script>
         <script src="{{ URL::to('js/geolocate.js')}}"></script>
+        <script src="{{ URL::to('js/crossfilter.js')}}"></script>
+        <script src="{{ URL::to('js/d3.js')}}"></script>
+        <script src="{{ URL::to('js/dc.js')}}"></script>
         <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyAeSzS1e65KEZkl9ENwN83zAJ64HfuYrQ4"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization&.js"></script>
         <!-- Noty -->
@@ -71,8 +75,7 @@
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="/issues">Issues</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="reports">Reports</a></li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
                       <ul class="dropdown-menu">
