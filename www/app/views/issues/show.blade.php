@@ -13,6 +13,7 @@
 				</p>
 				<p>{{ $issue->desc }}</p>
 				@include('partials/issue-status', array('issue'=>$issue))
+				@include('partials.comments', array('issue_id' => $issue->id, 'comments' => $issue->comments))
 			</div>	
 		</div>	
 	</div>	
