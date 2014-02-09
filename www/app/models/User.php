@@ -23,7 +23,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
   		$tracks = $this->tracks;
   		$trackedIssues = array();
   		foreach($tracks as $track){
-  			array_push($trackedIssues, $track->issue);
+  			if($track->issue->status != 'closed'){
+  				array_push($trackedIssues, $track->issue);
+  			}
   		}
   		return $trackedIssues;
   }

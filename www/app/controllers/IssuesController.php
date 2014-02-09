@@ -11,7 +11,7 @@ class IssuesController extends BaseController {
 	{
 		$user = Auth::user();
 
-		$all = Issue::all();
+		$all = Issue::where('status','<>','closed')->get();
 		$following = $user->tracked_issues();
 		$mine = array();
 

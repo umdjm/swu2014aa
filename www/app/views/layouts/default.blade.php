@@ -86,6 +86,7 @@
                         @if(Auth::check())
                             <li><a href="/issues/create">Submit</a></li>
                             <li><a href="/issues">View Issues</a></li>
+                            <li><a href="/reports">Reports</a></li>
                             <li><a href="{{ Url::to('logout') }}">Logout</a></li>
                         @else
                             <li><a href="#get-started">Get Started</a></li>
