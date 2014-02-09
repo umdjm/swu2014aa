@@ -288,3 +288,7 @@ fieldset[disabled] .btn-custom.active {
 .row {
     margin: 0px;
 }
+
+img {
+    max-width: 100%;
+}
