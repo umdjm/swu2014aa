@@ -3,7 +3,7 @@
 @section('content')
 	<div data-spy="scroll" data-target=".navbar-scrolling">
 	    <div id="get-started" class="intro-suw" style="background-image: url(http://electricsaver1200.com/blog/wp-content/uploads/2013/03/fixing-light.jpg); background-size: cover;">
-	        <h1 class="block-suw important-suw grabber-suw title-intro-suw" id="callout">Fix the issues your employees care about most. </h1>
+	        <h1 class="block-suw important-suw grabber-suw title-intro-suw" id="callout">Take Pictures. Solve Problems.</h1>
 
 	        <!--<a href="." class="cta-btn-suw pill-suw h2">How It Works</a>-->
 	        <button type="button" id="signup" class="btn-xlarge btn-custom" onclick="location.href='/users/create'">Get Started</button>
