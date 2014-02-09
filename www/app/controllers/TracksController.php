@@ -9,7 +9,7 @@ class TracksController extends BaseController {
 	 */
 	public function index()
 	{
-		$tracks = Issue::all();
+		$tracks = Auth::user()->tracks;
     return View::make('tracks.index', array("tracks" => $tracks));
 	}
 
@@ -37,7 +37,7 @@ class TracksController extends BaseController {
 		$track->notify = false;
 		$track->save();
 
-		return Redirect::to('issues/' . $track->issue_id);
+		return Redirect::to('issues/' . $track->issue_id)->with("flash_success", "You're now following this issue!");
 		// $redirect = Redirect::route('tracks', $track->id);
 		// die("Receiving post");
 	}
@@ -87,7 +87,7 @@ class TracksController extends BaseController {
 			$issue_id = Track::find($id)->issue->id;
 	    Track::destroy($id);
 
-	    return Redirect::to('issues/'.$issue_id);
+	    return Redirect::to('issues/'.$issue_id)->with("flash_success", "You're no longer following this issue... :[");;
 	}
 
 }
