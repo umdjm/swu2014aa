@@ -127,8 +127,8 @@
                 <div class="col-lg-5 col-md-5 col-sm-6 col-sm-6 text-muted hidden-xs">
                     <div id="address-box">
                         <address class="pull-right">
-                            <abbr title="Twitter">t:</abbr><a href="http://twitter.com/fixworthy">@fixworthy</a><br>
-                            <abbr title="Instagram">I:</abbr><a href="http://instagram.com/fixwothy">fixworthy</a>
+                            <i class="fa fa-twitter" title="Twitter"></i>&nbsp;<a href="http://twitter.com/fixworthy">@fixworthy</a><br>
+                            <i class="fa fa-instagram" title="Instagram"></i>&nbsp;<a href="http://instagram.com/fixworthy">fixworthy</a>
                         </address>
                     </div>
                 </div>

@@ -764,7 +764,6 @@ p, ol, ul, dl {
     font-size: 0.9rem;
 }
 a {
-    font-weight: bold;
     -moz-transition: all 0.15s ease-in;
     -ms-transition: all 0.15s ease-in;
     -o-transition: all 0.15s ease-in;
