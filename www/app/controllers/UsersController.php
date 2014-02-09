@@ -76,7 +76,7 @@ class UsersController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		//	
 	}
 
 	/**

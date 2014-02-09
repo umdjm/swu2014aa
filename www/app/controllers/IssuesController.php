@@ -78,7 +78,8 @@ class IssuesController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('issues.edit');
+		$issue = Issue::find($id);
+        return View::make('issues.edit', array("issue" => $issue));
 	}
 
 	/**
@@ -89,7 +90,18 @@ class IssuesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		if( Auth::user()->role == 'admin') {
+			$issue = Issue::find($id);
+
+			//TODO allow other changes?
+			$issue->priority =  Input::get("priority");
+			$issue->status =  Input::get("status");
+
+			//TODO handle notifications?
+		}	
+		else {
+			return Redirect::back()->with('flash_error', "You do not have rights to update this issue")->withInput();
+		}
 	}
 
 	/**
