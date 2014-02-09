@@ -59,6 +59,12 @@
     <div class="tab-content">
       <div class="tab-pane active" id="all">
         @include('partials.indexes/issues', array('issues' => $all))
+        <hr>
+
+
+
+
+
       </div>
       <div class="tab-pane" id="following">
         @include('partials.indexes/issues', array('issues' => $following))

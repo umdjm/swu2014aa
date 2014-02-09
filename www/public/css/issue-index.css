@@ -11,6 +11,45 @@ Last Modified:	07/05/2012
 Copyright 2012, All Rights Reserved.
 
 ----------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .square-issue {
+        height: 280px;
+        width: 280px;
+        margin: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .square-issue {
+            height: 320px;
+            width: 320px;
+            margin: 10px;
+        }
+ }
+@media (min-width: 992px) and (max-width: 1200px) {
+    .square-issue {
+        height: 300px;
+        width: 300px;
+        margin: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .square-issue {
+        height: 225px;
+        width: 225px;
+        margin:10px;
+    }
+
+
+}
+
+
+.square-issue {
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
 
 .search {
     font-family: FontAwesome;
