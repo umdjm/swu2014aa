@@ -2,9 +2,19 @@
 width: 80%;
 }
 
-.issue-header{
-    margin: 20px 0px;
+.intro-header{
+    padding-top: 30px;
+    border: 1px solid #CCCDCE;
+
 }
+.issue-header{
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.issue-header .control-label{
+    text-align: right;
+}
+
 
 .btn-selected{
     background-color: #3a3a3a;
