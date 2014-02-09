@@ -5,14 +5,18 @@
 		<div class="col-xs-6 col-xs-offset-3">
 			<h3>{{ $issue->name }}</h3>
 			@if ($issue->is_tracked_by_user())
-			    is tracked
+				<?php $track = Track::where('user_id', '=', Auth::user()->id)
+	                ->where('issue_id', '=', $issue->id)
+	                ->first(); ?>
+				{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks/' . $track->id, 'method' => 'DELETE')) }}
+					{{ Form::submit('Unfollow', array('class'=>'btn btn-primary pull-right')) }}
+		    {{ Form::close() }}
 			@else 
-			    is not tracking
+				{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks', 'method' => 'POST')) }}
+	        {{ Form::hidden('issue_id', $issue->id, array('id' => 'issue_id')) }}
+					{{ Form::submit('Follow', array('class'=>'btn btn-primary pull-right')) }}
+		    {{ Form::close() }}
 			@endif
-			{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks', 'method' => 'POST', 'files' => true)) }}
-        {{ Form::hidden('issue_id', $issue->id, array('id' => 'issue_id')) }}
-				{{ Form::submit('Track This Issue', array('class'=>'btn btn-primary pull-right')) }}
-	    {{ Form::close() }}
 
 			<div id="google-map"></div>
 			<img src="{{ $issue->photo }}" alt="" class="img-responsive"></img>

@@ -62,7 +62,7 @@ class TracksController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('issues.edit');
+      return View::make('issues.edit');
 	}
 
 	/**
@@ -84,7 +84,10 @@ class TracksController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+			$issue_id = Track::find($id)->issue->id;
+	    Track::destroy($id);
+
+	    return Redirect::to('issues/'.$issue_id);
 	}
 
 }
