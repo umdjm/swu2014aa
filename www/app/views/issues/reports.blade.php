@@ -4,6 +4,24 @@
 <div id="issue-reports">
     <h1>Issues Analytics Dashboard</h1>
 
+    <div class="row" id="analytics-overview">
+        <div class="col-md-4 analytics-highlight">
+            <h2>
+                <strong>Active Users:</strong> {{ User::count() }}
+            </h2>
+        </div>
+        <div class="col-md-4 analytics-highlight">
+            <h2>
+                <strong>Open Issues:</strong> {{ Issue::openCount() }}
+            </h2>
+        </div>
+        <div class="col-md-4 analytics-highlight">
+            <h2>
+                <strong>Closed Issues:</strong> {{ Issue::closedCount() }}
+            </h2>
+        </div>
+    </div>
+
     <div class="row">
       <div class="col-md-4">
            <h4>Issue Types</h4>

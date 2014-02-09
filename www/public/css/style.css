@@ -386,7 +386,18 @@ img {
     margin-top: 50px;
 }
 
+
 #contact a:hover {
     text-decoration: none;
+}
+
+
+#analytics-overview {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.analytics-highlight {
+    text-align: center;
 }
 

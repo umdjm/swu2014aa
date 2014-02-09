@@ -52,37 +52,24 @@
   </div>
 </div>
 
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#all" data-toggle="tab">All</a></li>
+  <li><a href="#following" data-toggle="tab">Following</a></li>
+  <li><a href="#my-issues" data-toggle="tab">My Issues</a></li>
+</ul>
 
+<div class="tab-content">
+  <div class="tab-pane active" id="all">
+    @include('partials.indexes/issues', array('issues' => $all))
+  </div>
+  <div class="tab-pane" id="following">
+    @include('partials.indexes/issues', array('issues' => $following))
+  </div>
+  <div class="tab-pane" id="my-issues">
+    @include('partials.indexes/issues', array('issues' => $mine))
+  </div>
+</div>
 
-<div class="wrapper" id="idea-wrapper">
-<ol id="idea-list" class="block-list grid main-grid">
-
-    <li data-count="2" data-totalcount="12" class="grid-block pill">
-    	<article class="grid-idea">
-            <a class="cover" href="/issues/create">
-    			<img src="{{ URL::to('imgs/post-an-issue.png')}}" class="pill grid-img photo" alt="IdeaPot" width="500px" height="1000px">
-            </a>
-    	</article>
-    </li>
-  @foreach ($issues as $issue)
-
-    <li data-count="2" data-totalcount="12" class="grid-block pill">
-    	<article class="grid-idea">
-            <a class="cover" href="/issues/{{ $issue->id }}">
-
-                <div class="circleBase idea-status status-{{ $issue->priority_string() }}" >
-                </div>
-                <h1 class="important h4 overlay issue-name" >{{ $issue->name }}</h1>
-    			<img src="{{ $issue->photo }}" class="pill grid-img photo" alt="IdeaPot" width="1000px" height="1000px">
-    			<div class="pill overlay description">
-                    Priority:{{ $issue->priority_string() }}
-                    <p>{{ $issue->desc }}</p>
-                </div>
-            </a>
-    	</article>
-    </li>
-  @endforeach
-</ol>
 
  <script>
 function initPage()

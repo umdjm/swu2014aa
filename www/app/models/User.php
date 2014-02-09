@@ -20,7 +20,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
   public function tracked_issues()
   {
-
   		$tracks = $this->tracks;
   		$trackedIssues = array();
   		foreach($tracks as $track){
