@@ -2,29 +2,27 @@
 
 @section('content')
 	<div class="row">
-		<div class="col-xs-6 col-xs-offset-3">
-			
+		<div class="col-lg-6 col-lg-offset-3 col-xs-12 col-sm-12">
 			<h3>What's your issue?</h3>
 			{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'issues', 'method' => 'POST', 'files' => true)) }}
-            <div class="form-group">
-							{{ Form::label('name','Title') }}
-							{{ Form::text('name', null, array('class' => 'form-control')) }}
-						</div>
-					<div class="form-group">
-						{{ Form::label('desc','Description') }}
-						{{ Form::textarea('desc', null, array('class' => 'form-control', 'rows' => 2)) }}
-          </div>
-            <div class="form-group">
-							{{ Form::label('priority','Priority') }}
-							{{ Form::radio('priority', 3, true) }}
-							Low
-							{{ Form::radio('priority', 2) }}
-							Medium
-							{{ Form::radio('priority', 1) }}
-							High
-						</div>
-						
 		        <fieldset>
+		            <div class="form-group">
+						{{ Form::label('name','Title', array('class' => 'hidden-xs hidden-sm')) }}
+						{{ Form::text('name', null, array('class' => 'form-control')) }}
+					</div>
+					<div class="form-group">
+						{{ Form::label('desc','Description', array('class' => 'hidden-xs hidden-sm')) }}
+						{{ Form::textarea('desc', null, array('class' => 'form-control', 'rows' => 2)) }}
+			        </div>
+		            <div class="form-group">
+						{{ Form::label('priority','Priority') }}
+						{{ Form::radio('priority', 3, true) }}
+						Low
+						{{ Form::radio('priority', 2) }}
+						Medium
+						{{ Form::radio('priority', 1) }}
+						High
+					</div>
 		            <div class="form-group">
 		            	<img id="snapshot" class="img-responsive" src=""></img>
 		                <span class="btn btn-primary btn-file">
@@ -35,9 +33,6 @@
 		        	<div class="form-group">
 		        		<div id="google-map"></div>
 		        	</div>
-
-
-		            
 		            <div class="form-group">
 		                {{ Form::submit('Save Issue', array('class'=>'btn btn-primary pull-right')) }}
 		            </div>
@@ -97,5 +92,5 @@
 		}
 
 		document.addEventListener('DOMContentLoaded', initMap, false);
-	</script>
+	</script>	
 @stop

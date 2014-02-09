@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Fix Worthy</title>
+        <title>FixWorthy</title>
         <link rel="shortcut icon" href="{{ URL::to('favicon.ico') }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
         <!-- TODO: Add local fallback for bootstrap and jQuery -->

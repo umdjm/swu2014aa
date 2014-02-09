@@ -7,12 +7,12 @@
 			<div id="google-map"></div>
 			<img src="{{ $issue->photo }}" alt="" class="img-responsive"></img>
 			<div>
-				<p>{{ $issue->desc }}</p>
-				<p class="priority{xp">{{ $issue->priority_string() }} Priority
 				<p>
 					Submitted by 
 					<span>{{ $issue->user->name }}</span>
 				</p>
+				<p>{{ $issue->desc }}</p>
+				@include('partials/issue-status', array('issue'=>$issue))
 			</div>	
 		</div>	
 	</div>	

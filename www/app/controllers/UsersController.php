@@ -40,6 +40,9 @@ class UsersController extends BaseController {
 		$user->password = Hash::make($pwd);
 
 		$user->save();
+
+		Auth::loginUsingId($user->id);
+
 		return Redirect::to('/issues');
 	}
 
@@ -73,7 +76,7 @@ class UsersController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		//	
 	}
 
 	/**
@@ -94,6 +97,13 @@ class UsersController extends BaseController {
 			'password' => Input::get('password')
 		);   
 		if (Auth::attempt($user)) {
+			if (Session::has('returnUrl'))
+			{
+				$intendedDestination = Session::get('returnUrl');
+				Session::forget('returnUrl');
+			    return Redirect::to($intendedDestination)
+		    	->with('flash_success', 'You are successfully logged in.');
+			}
         	return Redirect::to('/')->with('flash_success', 'You are successfully logged in!');
         }
         return Redirect::to('/')->with('flash_error', 'There was an error logging you in. Please try again.');
