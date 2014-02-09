@@ -363,3 +363,17 @@ img {
     max-width: 100%;
 }
 
+.round-img {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.pricing {
+    background-color: #36b26b;
+    color: white;
+    text-align:center;
+}
+
+#about {
+    padding-bottom:30px;
+}
