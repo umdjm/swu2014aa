@@ -8,7 +8,7 @@
 		        <fieldset>
 		            <div class="form-group">
 						{{ Form::label('name','Title', array('class' => 'hidden-xs hidden-sm')) }}
-						{{ Form::text('name', null, array('class' => 'form-control', 'placeholder' =>'title')) }}
+						{{ Form::text('name', null, array('class' => 'form-control', 'placeholder' =>'title', 'required' => true)) }}
 					</div>
 					<div class="form-group">
 						{{ Form::label('desc','Description', array('class' => 'hidden-xs hidden-sm')) }}
