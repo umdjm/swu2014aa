@@ -109,6 +109,7 @@ ul {
     background: #c5c5c5;
 }
 
+
 aside {
     display: block;
 }
@@ -278,4 +279,16 @@ fieldset[disabled] .btn-custom.active {
 .modal-header {
 	background-color: #f3643c;
 	color: white;
+}
+
+#content {
+	padding-top:50px;
+}
+
+.row {
+    margin: 0px;
+}
+
+img {
+    max-width: 100%;
 }

@@ -2,9 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Fix Worthy</title>
+        <title>FixWorthy</title>
         <link rel="shortcut icon" href="{{ URL::to('favicon.ico') }}" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{{ URL::to('fw-60x60.png') }}" rel="apple-touch-icon" />
+        <link href="{{ URL::to('fw-76x76.png') }}" rel="apple-touch-icon" sizes="76x76" />
+        <link href="{{ URL::to('fw-120x120.png') }}" rel="apple-touch-icon" sizes="120x120" />
+        <link href="{{ URL::to('fw-152x152.png') }}" rel="apple-touch-icon" sizes="152x152" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
         <!-- TODO: Add local fallback for bootstrap and jQuery -->
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}">
@@ -58,47 +62,74 @@
                 </script>
             @endif
 
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                        <a class="navbar-brand hidden-xs" href="/"><img id="brand-img" src="{{ URL::to('/FW-logo.png')}}" /img></a>
+                        <a class="navbar-brand visible-xs" href="/"><img width='180px' src="{{ URL::to('/FW-logo.png')}}" /img></a>
+                    </div><!-- end navbar-header -->
 
-            <nav id="page_header" class="block-suw navbar navbar-default" role="navigation">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="/"><img src="{{ URL::to('/FW-logo.png')}}" /img></a>
+                     <!-- Collect the nav links, forms, and other content for toggling --> 
+                    <div class="collapse navbar-collapse navbar-right" id="collapse-1">
+                        <ul class="nav navbar-nav">
+                        
+                        @if(Auth::check())
+                            <li><a href="/issues/create">Post An Issue</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="/issues">Profile</a></li>
+                            <li><a href="{{ Url::to('logout') }}">Logout</a></li>
+
+                        @else
+                            <li><a href="#get-started">Get Started</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#login" data-toggle='modal'>Login</a></li>
+                        @endif
+                        </ul>
+                    </div><!-- end collapsable -->
+
+
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="/issues">Issues</a></li>
-                    <li><a href="reports">Reports</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Who We Are</a></li>
-                        <li><a href="#">How Issues Get Fixed</a></li>
-                        <li><a href="#">How do Ideas Get Funded</a></li>
-                      </ul>
-                    </li>
-                    @if(Auth::check())
-                        <li><a href="{{ Url::to('logout') }}">Logout</a></li>
-                    @else
-                        <li><a href="#login" data-toggle='modal'>Login</a></li>
-                    @endif
-                  </ul>
-                </div><!-- /.navbar-collapse -->
-              </div><!-- /.container-fluid -->
             </nav>
+            
+
         <div id="content">
             @yield('content')
         </div>
         
+        <div id="contact" class="container">
+            <div class="row">
+                <hr>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <p>Contact 1</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <p>Contact 1</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <ul>
+                        <li><img src="{{ URL::to('media/24/Twitter.png')}}" class="img-rounded" /><a href="http://twitter.com/FixWorthy">@FixWorthy</a></li>
+                        <li><img src="{{ URL::to('media/24/Instagram.png')}}" class="img-rounded" />Instagram</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
         <div id="footer">
-            @yield('footer')
+            <div class="container" id="footer">
+                <div class="row">
+                    <hr>
+                    <p>Copyright &copy; FixWorthy 2014. All Rights Reserved</p>
+                </div>
+            </div>
         </div>
 
         <!-- login modal -->
