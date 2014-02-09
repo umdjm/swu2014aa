@@ -7,7 +7,7 @@
     </li>
             
     @foreach ($issues as $index=>$issue)
-      <li class="square-issue" style="border:solid; border-color: lightgrey; background-image:url({{ $issue->photo }});" onclick="location.href = '/issues/{{ $issue->id }}';">
+      <li class="square-issue" style="border:solid; border-color: lightgrey; background-size:cover; background-image:url({{ $issue->photo }});" onclick="location.href = '/issues/{{ $issue->id }}';">
         <div class="circleBase idea-status status-{{ $issue->priority_string() }}" ></div>
        <div class="image-label">
         <h1>{{ $issue->name }}</h1>
