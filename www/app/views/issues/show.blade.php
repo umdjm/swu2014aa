@@ -5,8 +5,7 @@
     <link rel="stylesheet" href="{{ URL::to('css/issue-show.css') }}">
 
 	<div class="container">
-		<div class="clear-header">
-	    <div>
+		<div class="clear-header"/>
 		<div class="row">
 			<div class="col-md-6">
 			        <img class="issue-hero-image" src="{{ $issue->photo }}"></img>
@@ -58,14 +57,16 @@
 			</div>
 		</div>
 
-            <div class="row">
-                <div class="col-md-3">
-                    <div id="google-map"></div>
-                </div>
-                <div class="col-md-9">
-                    @include('partials.comments', array('issue_id' => $issue->id, 'comments' => $issue->comments))
-                </div>
+		<div class="clear-header"/>
+        <div class="row">
+            <div class="col-md-3">
+                <div id="google-map"></div>
             </div>
+            <div class="col-md-9">
+                @include('partials.comments', array('issue_id' => $issue->id, 'comments' => $issue->comments))
+            </div>
+        </div>
+    </div>
 	<script>
 	    function initPage()
 	    {
