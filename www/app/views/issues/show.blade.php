@@ -4,6 +4,11 @@
 	<div class="row">
 		<div class="col-xs-6 col-xs-offset-3">
 			<h3>{{ $issue->name }}</h3>
+			@if ($issue->is_tracked_by_user())
+			    is tracked
+			@else 
+			    is not tracking
+			@endif
 			{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks', 'method' => 'POST', 'files' => true)) }}
         {{ Form::hidden('issue_id', $issue->id, array('id' => 'issue_id')) }}
 				{{ Form::submit('Track This Issue', array('class'=>'btn btn-primary pull-right')) }}
