@@ -31,9 +31,6 @@
 			                    {{ Form::file('photo', array('accept'=>'image/*')) }}
 			                </span>
 			            </div>
-			        	<!--<div class="form-group">
-			        		<div id="google-map"></div>
-			        	</div>-->
 			            <div class="form-group">
 			                {{ Form::submit('Submit Issue', array('class'=>'btn btn-custom btn-block')) }}
 			            </div>
@@ -50,39 +47,11 @@
 			var marker;
 
 			function onSuccess(data) {
-				google.maps.visualRefresh = true;
-
 				var lat = data.coords.latitude;
 				var lng = data.coords.longitude;
 
-				var options = {
-					zoom: 18,
-					center: new google.maps.LatLng(lat, lng),
-					mapTypeId: google.maps.MapTypeId.ROADMAP,
-					mapTypeControl: false,
-					streetViewControl: false
-				};
-
-				var mapElem = document.getElementById('google-map'); 
-				var map = new google.maps.Map(mapElem, options);
-
-				marker = new google.maps.Marker({
-					position: new google.maps.LatLng(lat, lng),
-					map: map,
-					draggable: true
-				});
-
 				$('#latitude').val(lat);
 				$('#longitude').val(lng);
-
-				google.maps.event.addListener(
-				    marker,
-				    'drag',
-				    function() {
-				        $('#latitude').val(marker.position.lat());
-				        $('#longitude').val(marker.position.lng());
-				    }
-				);
 			}
 
 			function onFail(err) {
