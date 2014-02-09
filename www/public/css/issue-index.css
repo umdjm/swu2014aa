@@ -11,6 +11,89 @@ Last Modified:	07/05/2012
 Copyright 2012, All Rights Reserved.
 
 ----------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .square-issue {
+        height: 280px;
+        width: 280px;
+        margin: 10px;
+    }
+
+    .image-label {
+        width: 274px;
+        margin-left:-5px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .square-issue {
+            height: 320px;
+            width: 320px;
+            margin: 10px;
+        }
+
+        .image-label {
+        width: 314px;
+        margin-left:-5px;
+    }
+
+ }
+@media (min-width: 992px) and (max-width: 1200px) {
+    .square-issue {
+        height: 300px;
+        width: 300px;
+        margin: 10px;
+    }
+    .image-label {
+        width: 294px;
+        margin-left:-5px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .square-issue {
+        height: 225px;
+        width: 225px;
+        margin:10px;
+    }
+
+    .image-label {
+        width: 219px;
+        margin-left:-5px;
+    }
+
+
+
+}
+
+
+.square-issue {
+    background-position: center center;
+    background-repeat: no-repeat;
+    position:relative;
+}
+
+.image-label {
+    color: black;
+    background-color:white;
+    position:absolute;
+    bottom:0;
+
+
+}
+
+.image-label h1 {
+    font-size:14px;
+    text-align:center;
+    color: #0088cc;
+    font-weight:bold;
+    font-family: Interstate, Helvetica, Arial, sans-serif;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+}
+
+
+
 
 .search {
     font-family: FontAwesome;

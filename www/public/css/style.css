@@ -408,6 +408,16 @@ img {
     text-align: center;
 }
 
+#tabbed-list {
+    margin-top: 25px;
+}
+
+
+@media (max-width: @screen-xs-max) { ... }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+@media (min-width: @screen-lg-min) { ... }
+
 .badge-endorsed {
     color: #d3d3d3 !important;
 }
