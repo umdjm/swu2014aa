@@ -17,6 +17,11 @@ Copyright 2012, All Rights Reserved.
         width: 280px;
         margin: 10px;
     }
+
+    .image-label {
+        width: 280px;
+        margin-left:-5px;
+    }
 }
 @media (min-width: 768px) and (max-width: 992px) {
     .square-issue {
@@ -24,6 +29,12 @@ Copyright 2012, All Rights Reserved.
             width: 320px;
             margin: 10px;
         }
+
+        .image-label {
+        width: 320px;
+        margin-left:-5px;
+    }
+
  }
 @media (min-width: 992px) and (max-width: 1200px) {
     .square-issue {
@@ -31,6 +42,11 @@ Copyright 2012, All Rights Reserved.
         width: 300px;
         margin: 10px;
     }
+    .image-label {
+        width: 300px;
+        margin-left:-5px;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -40,6 +56,12 @@ Copyright 2012, All Rights Reserved.
         margin:10px;
     }
 
+    .image-label {
+        width: 225px;
+        margin-left:-5px;
+    }
+
+
 
 }
 
@@ -47,9 +69,20 @@ Copyright 2012, All Rights Reserved.
 .square-issue {
     background-position: center center;
     background-repeat: no-repeat;
+    position:relative;
 }
 
+.image-label {
+    color: black;
+    background-color:white;
+    position:absolute;
+    bottom:0;
+}
 
+.image-label h1 {
+    font-size:10px;
+    text-align:center;
+}
 
 .search {
     font-family: FontAwesome;
