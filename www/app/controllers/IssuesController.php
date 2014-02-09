@@ -13,7 +13,7 @@ class IssuesController extends BaseController {
 			$issues = Auth::user()->tracked_issues();
 			// die(count($issues));
 		} else {
-			$issues = Issue::all();
+			$issues = Issue::where('status','<>', 'closed')->get();
 		}
 		
     return View::make('issues.index', array("issues" => $issues));
