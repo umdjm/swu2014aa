@@ -1,3 +1,13 @@
+h1, h2, h3
+{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    /*-webkit-font-smoothing: antialiased;*/
+    /*-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;*/
+    /*-webkit-text-stroke: 0.6px;*/
+    /*text-shadow: #222 0px 0px 1px;*/
+}
+
 #search-box{
 width: 80%;
 }
@@ -228,6 +238,10 @@ aside {
 	color: white;
 	text-decoration:none;
 	max-width: 80%;
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-shadow: #db522c 0px 4px 1px;
 }
 
 
