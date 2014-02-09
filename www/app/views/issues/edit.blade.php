@@ -34,6 +34,8 @@
 							{{ Form::label('status', 'Status') }}
 							{{ Form::select('status', array('new' => 'New', 'active' => 'Active', 'closed' => 'Closed'), $issue->status)}}
 						</div>
+					@else
+						@include('partials.issue-status', array('issue'=>$issue))
 					@endif
 					{{ Form::hidden('latitude', $issue->latitude, array('id'=>'latitude')) }}
 					{{ Form::hidden('longitude', $issue->longitude, array('id'=>'longitude')) }}

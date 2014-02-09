@@ -66,7 +66,7 @@ class IssuesController extends BaseController {
 	 */
 	public function show($id)
 	{
-				$issue = Issue::find($id);
+		$issue = Issue::find($id);
         return View::make('issues.show', array("issue" => $issue));
 	}
 
@@ -79,7 +79,14 @@ class IssuesController extends BaseController {
 	public function edit($id)
 	{
 		$issue = Issue::find($id);
-        return View::make('issues.edit', array("issue" => $issue));
+		$user = Auth::user();
+
+		if( $user->id == $issue->user_id || $user->role == 'admin') {
+        	return View::make('issues.edit', array("issue" => $issue));
+		}
+		else {
+			return Redirect::back()->with('flash_error', 'You do not have permission to edit this issue');
+		}
 	}
 
 	/**
@@ -90,17 +97,29 @@ class IssuesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		if( Auth::user()->role == 'admin') {
-			$issue = Issue::find($id);
+		$issue = Issue::find($id);
+		$user = Auth::user();
+		$isAdmin = $user->role == 'admin';
 
-			//TODO allow other changes?
-			$issue->priority =  Input::get("priority");
-			$issue->status =  Input::get("status");
+		if( $user->id == $issue->user_id || $isAdmin) {
+
+			$issue->name = Input::get("name");
+			$issue->desc = Input::get("desc");
+			$issue->latitude = Input::get("latitude");
+			$issue->longitude = Input::get("longitude");
+
+			if($isAdmin) {
+				$issue->priority =  Input::get("priority");
+				$issue->status =  Input::get("status");
+			}
 
 			//TODO handle notifications?
+
+			$issue->save();
+			return Redirect::to('issues/' . $issue->id);
 		}	
 		else {
-			return Redirect::back()->with('flash_error', "You do not have rights to update this issue")->withInput();
+			return Redirect::back()->with('flash_error', "You do not have permission to edit this issue")->withInput();
 		}
 	}
 
