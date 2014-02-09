@@ -23,7 +23,7 @@
 						{{ Form::password('reenter-pasword', array( 'class' => 'form-control', 'placeholder' => 're-enter password'))}}
 					</div>
 				    <div class="form-group">
-				        {{ Form::submit('Save Issue', array('class'=>'btn btn-primary pull-right')) }}
+				        {{ Form::submit('Create User', array('class'=>'btn btn-primary pull-right')) }}
 				    </div>
 				</fieldset>
 			{{ Form::close() }}
