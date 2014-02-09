@@ -9,7 +9,8 @@ class IssuesController extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('issues.index');
+		$issues = Issue::all();
+    return View::make('issues.index', array("issues" => $issues));
 	}
 
 	/**
@@ -37,7 +38,6 @@ class IssuesController extends BaseController {
 		$issue->latitude = Input::get("latitude");
 		$issue->longitude = Input::get("longitude");
 		$issue->priority = Input::get("priority");
-
 
 		if (Input::hasFile('photo'))
 		{

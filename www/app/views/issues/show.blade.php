@@ -8,7 +8,7 @@
 			<img src="{{ $issue->photo }}" alt="" class="img-responsive"></img>
 			<div>
 				<p>{{ $issue->desc }}</p>
-				<p class="priority{{ $issue->priority_string() }}">{{ $issue->priority_string() }} Priority
+				<p class="priority{xp">{{ $issue->priority_string() }} Priority
 				<p>
 					Submitted by 
 					<span>{{ $issue->user->name }}</span>

@@ -34,45 +34,22 @@
   </div>
 </div>
 
+
 <ul id="ul-example" class="row">
-  <li class="issue col-md-3" data-color="gray">
-    <div class="thumbnail">
-        <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" />
-      <div class="caption">
-        <h4>Palmer Commons Pothole</h4>
+
+
+  @foreach ($issues as $issue)
+    <li class="issue col-md-3" data-color="gray">
+      <a href="/issues/{{ $issue->id }}">
+      <div class="thumbnail">
+          <img src="{{ $issue->photo }}" />
+        <div class="caption">
+          <h4>{{ $issue->name }}</h4>
+        </div>
       </div>
-    </div>
-  </li>
-  <li class="issue col-md-3" data-color="gray">
-    <div class="thumbnail">
-      <div class="thumbnail-image">
-        <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" />
-      </div>
-      <div class="caption">
-        <h4>Palmer Commons Pothole</h4>
-      </div>
-    </div>
-  </li>
-  <li class="issue col-md-3" data-color="gray">
-    <div class="thumbnail">
-      <div class="thumbnail-image">
-        <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" />
-      </div>
-      <div class="caption">
-        <h4>Palmer Commons Pothole</h4>
-      </div>
-    </div>
-  </li>
-  <li class="issue col-md-3" data-color="gray">
-    <div class="thumbnail">
-      <div class="thumbnail-image">
-        <img src="http://www.metro.us/wp-content/uploads/2013/03/pothole.jpg" />
-      </div>
-      <div class="caption">
-        <h4>Palmer Commons Pothole</h4>
-      </div>
-    </div>
-  </li>
+      </a>
+    </li>
+  @endforeach
 </ul>
 
  <script>
