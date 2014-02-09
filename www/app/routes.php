@@ -24,3 +24,4 @@ Route::post('login', 'UsersController@login');
 Route::get('logout', 'UsersController@logout');
 Route::resource('users', 'UsersController');
 Route::resource('issues', 'IssuesController');
+Route::resource('tracks', 'TracksController');
