@@ -104,7 +104,7 @@ class UsersController extends BaseController {
 			    return Redirect::to($intendedDestination)
 		    	->with('flash_success', 'You are successfully logged in.');
 			}
-        	return Redirect::to('/')->with('flash_success', 'You are successfully logged in!');
+        	return Redirect::to('/issues')->with('flash_success', 'You are successfully logged in!');
         }
         return Redirect::to('/')->with('flash_error', 'There was an error logging you in. Please try again.');
 	}
