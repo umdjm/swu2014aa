@@ -79,7 +79,7 @@
 	 <!-- Begin green band for pricing -->
 	 <div class="pricing">
 	 	<div class="row">
-	 		<div class="col-lg-8 col-lg-offset-2" style="padding: 10px;">
+	 		<div class="col-lg-8 col-lg-offset-2">
 	 			<h4>- PRICING STARTS AT -</h4>
 	 			<h2>$250 / MONTH</h2>
 	 		</div>
