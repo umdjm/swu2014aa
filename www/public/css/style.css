@@ -284,3 +284,7 @@ fieldset[disabled] .btn-custom.active {
 #content {
 	padding-top:50px;
 }
+
+.row {
+    margin: 0px;
+}
