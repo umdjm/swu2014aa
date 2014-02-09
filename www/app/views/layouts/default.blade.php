@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Fix Worthy</title>
         <link rel="shortcut icon" href="{{ URL::to('favicon.ico') }}" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
         <!-- TODO: Add local fallback for bootstrap and jQuery -->
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}">
@@ -68,7 +68,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" href="/"><img src="{{ URL::to('/FW-logo.png')}}" /img></a>
+
+                        <a class="navbar-brand hidden-xs" href="/"><img id="brand-img" src="{{ URL::to('/FW-logo.png')}}" /img></a>
+                        <a class="navbar-brand visible-xs" href="/"><img width='180px' src="{{ URL::to('/FW-logo.png')}}" /img></a>
+
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
