@@ -40,6 +40,9 @@ class UsersController extends BaseController {
 		$user->password = Hash::make($pwd);
 
 		$user->save();
+
+		Auth::loginUsingId($user->id);
+
 		return Redirect::to('/issues');
 	}
 
