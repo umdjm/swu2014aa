@@ -20,7 +20,7 @@
 					</div>
 					<div class="form-group">
 						{{ Form::label('reenter-password', 're-enter password', array('class' => 'hidden-xs hidden-sm')) }}
-						{{ Form::password('reenter-pasword', array( 'class' => 'form-control', 'placeholder' => 're-enter password'))}}
+						{{ Form::password('reenter-password', array( 'class' => 'form-control', 'placeholder' => 're-enter password'))}}
 					</div>
 				    <div class="form-group">
 				        {{ Form::submit('Create User', array('class'=>'btn btn-primary pull-right')) }}
