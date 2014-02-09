@@ -1,9 +1,13 @@
 <div class="row">
   <ul class="list-inline">
-    <li class="square-issue" style="background-image:url({{ URL::to('imgs/post-an-issue.png')}});" onclick="location.href = '/issues/create';"></li>
+    <li class="square-issue" style="border:solid; border-color: lightgrey; background-image:url({{ URL::to('imgs/post-an-issue.png')}}); background-size:100%" onclick="location.href = '/issues/create';">
+       <div class="image-label" style="margin-left:0px">
+        <h1>Click to Submit</h1>
+      </div>
+    </li>
             
     @foreach ($issues as $index=>$issue)
-      <li class="square-issue" style="background-image:url({{ $issue->photo }});" onclick="location.href = '/issues/{{ $issue->id }}';">
+      <li class="square-issue" style="border:solid; border-color: lightgrey; background-image:url({{ $issue->photo }});" onclick="location.href = '/issues/{{ $issue->id }}';">
         <div class="circleBase idea-status status-{{ $issue->priority_string() }}" ></div>
        <div class="image-label">
         <h1>{{ $issue->name }}</h1>

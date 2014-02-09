@@ -19,7 +19,7 @@ Copyright 2012, All Rights Reserved.
     }
 
     .image-label {
-        width: 280px;
+        width: 274px;
         margin-left:-5px;
     }
 }
@@ -31,7 +31,7 @@ Copyright 2012, All Rights Reserved.
         }
 
         .image-label {
-        width: 320px;
+        width: 314px;
         margin-left:-5px;
     }
 
@@ -43,7 +43,7 @@ Copyright 2012, All Rights Reserved.
         margin: 10px;
     }
     .image-label {
-        width: 300px;
+        width: 294px;
         margin-left:-5px;
     }
 
@@ -57,7 +57,7 @@ Copyright 2012, All Rights Reserved.
     }
 
     .image-label {
-        width: 225px;
+        width: 219px;
         margin-left:-5px;
     }
 
@@ -77,12 +77,23 @@ Copyright 2012, All Rights Reserved.
     background-color:white;
     position:absolute;
     bottom:0;
+
+
 }
 
 .image-label h1 {
-    font-size:10px;
+    font-size:14px;
     text-align:center;
+    color: #0088cc;
+    font-weight:bold;
+    font-family: Interstate, Helvetica, Arial, sans-serif;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
 }
+
+
+
 
 .search {
     font-family: FontAwesome;
