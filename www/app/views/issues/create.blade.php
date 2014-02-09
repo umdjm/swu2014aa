@@ -14,15 +14,6 @@
 						{{ Form::label('desc','Description', array('class' => 'hidden-xs hidden-sm')) }}
 						{{ Form::textarea('desc', null, array('class' => 'form-control', 'rows' => 2, 'placeholder' => 'description...')) }}
 			        </div>
-		            <div class="form-group">
-						{{ Form::label('priority','Priority') }}
-						{{ Form::radio('priority', 3, true) }}
-						Low
-						{{ Form::radio('priority', 2) }}
-						Medium
-						{{ Form::radio('priority', 1) }}
-						High
-					</div>
 					<div class="col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1">
 			            <div class="form-group">
 			            	<img id="snapshot" class="img-responsive" src="" style="margin:0 auto;"></img>
