@@ -87,6 +87,7 @@
                             <li><a href="/issues/create">Submit</a></li>
                             <li><a href="/issues?following=true">Following</a></li>
                             <li><a href="/issues">All</a></li>
+                            <li><a href="/reports">Reports</a></li>
                             <li><a href="{{ Url::to('logout') }}">Logout</a></li>
 
                         @else

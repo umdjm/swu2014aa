@@ -363,6 +363,7 @@ img {
     max-width: 100%;
 }
 
+
 .round-img {
     margin: 0 auto;
     width: 200px;
@@ -377,3 +378,8 @@ img {
 #about {
     padding-bottom:30px;
 }
+
+#issue-reports {
+    margin-top: 50px;
+}
+
