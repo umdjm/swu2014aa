@@ -9,7 +9,13 @@ class IssuesController extends BaseController {
 	 */
 	public function index()
 	{
-		$issues = Issue::all();
+		if(Input::has('following')){
+			$issues = Auth::user()->tracked_issues();
+			// die(count($issues));
+		} else {
+			$issues = Issue::all();
+		}
+		
     return View::make('issues.index', array("issues" => $issues));
 	}
 
