@@ -9,7 +9,7 @@ class TracksController extends BaseController {
 	 */
 	public function index()
 	{
-		$tracks = Issue::all();
+		$tracks = Auth::user()->tracks;
     return View::make('tracks.index', array("tracks" => $tracks));
 	}
 
