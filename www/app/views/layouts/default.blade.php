@@ -95,7 +95,12 @@
         </div>
         
         <div id="footer">
-            @yield('footer')
+            <div class="container" id="footer">
+                <div class="row">
+                    <br />
+                    <p>&copy; Fix Worthy 2014</p>
+                </div>
+            </div>
         </div>
 
         <!-- login modal -->
