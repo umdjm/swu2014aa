@@ -5,52 +5,32 @@
 <div class="row">
   <div class="col-md-4">
        <h4>Issue Types</h4>
-  </div>
-  <div class="col-md-4">
-       <h4>Departments</h4>
-  </div>
-  <div class="col-md-4">
-       <h4>Issue Owner</h4>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4">
         <div id="typeChart" ></div>
   </div>
   <div class="col-md-4">
+       <h4>Departments</h4>
         <div id="deptChart" ></div>
   </div>
   <div class="col-md-4">
+       <h4>Issue Owner</h4>
         <div id="ownerChart" ></div>
   </div>
 </div>
 
-
 <div class="row">
   <div class="col-md-6">
        <h4>Issue Status</h4>
-  </div>
-  <div class="col-md-6">
-       <h4>Days Open</h4>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-6">
         <div id="statusChart" ></div>
   </div>
   <div class="col-md-6">
+       <h4>Days Open</h4>
         <div id="daysOpenChart" ></div>
   </div>
 </div>
 
-
 <div class="row">
   <div class="col-md-12">
        <h4>Date Opened</h4>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-12">
         <div id="dateChart" ></div>
   </div>
 </div>
@@ -81,6 +61,10 @@ function addDays(date, days) {
 
 var chartExample = {
     initChart: function (issues) {
+        var smallSize = $(".col-md-4").first().width();
+        var mediumSize = $(".col-md-6").first().width();
+        var largeSize = $(".col-md-12").first().width();
+
         var typeChart = dc.rowChart("#typeChart");
         var deptChart = dc.rowChart("#deptChart");
         var ownerChart = dc.rowChart("#ownerChart");
@@ -118,7 +102,7 @@ var chartExample = {
     dateChart
             .elasticY(true)
             .renderHorizontalGridLines(true)
-            .width(1366)
+            .width(largeSize)
             .height(280)
             .gap(10)
             .valueAccessor(function (d) {
@@ -139,21 +123,21 @@ var chartExample = {
     dateChart.xAxis().tickFormat(function(v) {return monthFormat(v);});
 
     typeChart
-            .width(400)
+            .width(smallSize)
             .height(280)
             .dimension(typeDimension)
             .group(typeGroup)
             .elasticX(true)
             .xAxis().ticks(4);
     deptChart
-            .width(400)
+            .width(smallSize)
             .height(280)
             .dimension(deptDimension)
             .group(deptGroup)
             .elasticX(true)
             .xAxis().ticks(4);
     ownerChart
-        .width(400)
+        .width(smallSize)
         .height(280)
         .dimension(ownerDimension)
         .group(ownerGroup)
@@ -161,14 +145,14 @@ var chartExample = {
         .xAxis().ticks(4);
 
     statusChart
-        .width(600)
+        .width(mediumSize)
         .height(280)
         .colors(d3.scale.ordinal().domain(statuses).range(statusColors))
         .dimension(statusDimension)
         .group(statusGroup);
 
     daysOpenChart
-            .width(600)
+            .width(mediumSize)
             .height(280)
             .dimension(daysOpenDimension)
             .colors(d3.scale.ordinal().domain([""]).range(["#3182bd"]))
