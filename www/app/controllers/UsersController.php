@@ -102,7 +102,7 @@ class UsersController extends BaseController {
 	public function logout() {
 	    Auth::logout();
 
-	    return Redirect::route('/')
+	    return Redirect::to('/')
 	        ->with('flash_success', 'You are successfully logged out.');
 	}
 

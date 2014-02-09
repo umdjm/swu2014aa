@@ -81,7 +81,11 @@
                         <li><a href="#">How do Ideas Get Funded</a></li>
                       </ul>
                     </li>
-                    <li><a href="#login" data-toggle='modal'>Login</a></li>
+                    @if(Auth::check())
+                        <li><a href="{{ Url::to('logout') }}">Logout</a></li>
+                    @else
+                        <li><a href="#login" data-toggle='modal'>Login</a></li>
+                    @endif
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
