@@ -4,6 +4,10 @@
         <meta charset="utf-8">
         <title>FixWorthy</title>
         <link rel="shortcut icon" href="{{ URL::to('favicon.ico') }}" />
+        <link href="{{ URL::to('fw-60x60.png') }}" rel="apple-touch-icon" />
+        <link href="{{ URL::to('fw-76x76.png') }}" rel="apple-touch-icon" sizes="76x76" />
+        <link href="{{ URL::to('fw-120x120.png') }}" rel="apple-touch-icon" sizes="120x120" />
+        <link href="{{ URL::to('fw-152x152.png') }}" rel="apple-touch-icon" sizes="152x152" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
         <!-- TODO: Add local fallback for bootstrap and jQuery -->
         <!-- Bootstrap CSS -->
