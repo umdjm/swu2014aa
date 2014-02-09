@@ -1,6 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
+
     <div class="intro-suw" style="background-image: url(http://electricsaver1200.com/blog/wp-content/uploads/2013/03/fixing-light.jpg); background-size: cover;">
         <h1 class="block-suw important-suw grabber-suw title-intro-suw" id="callout">Fix the issues your employees care about most. </h1>
 
