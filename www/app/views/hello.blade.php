@@ -73,16 +73,6 @@
 		    	</div>
 	    	</div>
 
-	    	<div class="row" id="contact">
-
-	    		<div class="row">
-		    		<div class="col-lg-12 col-md-12 box">
-		    			<h3>Column 1</h3>
-		    			<p> feugiat, lectus lectus scelerisque sem, ac porta nulla tellus ac enim. Phasellus egestas quam eget fermentum tristique. Duis a semper dolor, ut aliquam purus. Morbi vulputate nisl eu sem volutpat pretium.</p>
-		    		</div>
-		    		
-		    	</div>
-	    	</div>
 
 	    </div>
 	 </div>

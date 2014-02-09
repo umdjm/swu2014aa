@@ -62,25 +62,22 @@
                 </script>
             @endif
 
-            <div class="navbar-scrolling">
-                <nav id="page_header" class="block-suw navbar navbar-default" role="navigation">
-                  <div class="container-fluid">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
                     <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-
                         <a class="navbar-brand hidden-xs" href="/"><img id="brand-img" src="{{ URL::to('/FW-logo.png')}}" /img></a>
                         <a class="navbar-brand visible-xs" href="/"><img width='180px' src="{{ URL::to('/FW-logo.png')}}" /img></a>
+                    </div><!-- end navbar-header -->
 
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                      <ul class="nav navbar-nav">
+                     <!-- Collect the nav links, forms, and other content for toggling --> 
+                    <div class="collapse navbar-collapse navbar-right" id="collapse-1">
+                        <ul class="nav navbar-nav">
                         
                         @if(Auth::check())
                             <li class='active'><a href="/issues/create">Post An Issue</a></li>
@@ -95,16 +92,34 @@
                             <li><a href="#contact">Contact</a></li>
                             <li><a href="#login" data-toggle='modal'>Login</a></li>
                         @endif
-                      </ul>
-                    </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-fluid -->
-                </nav>
-            </div>
+                        </ul>
+                    </div><!-- end collapsable -->
+
+
+                </div>
+            </nav>
+            
 
         <div id="content">
             @yield('content')
         </div>
         
+        <div id="contact" class="container">
+            <div class="row">
+                <br />
+                <div class="col-lg-4">
+                    <p>Contact 1</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Contact 1</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Contact 1</p>
+                </div>
+            </div>
+        </div>
+
+
         <div id="footer">
             <div class="container" id="footer">
                 <div class="row">

@@ -281,3 +281,6 @@ fieldset[disabled] .btn-custom.active {
 	color: white;
 }
 
+#content {
+	padding-top:50px;
+}
