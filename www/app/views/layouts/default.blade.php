@@ -81,9 +81,9 @@
                         <ul class="nav navbar-nav">
                         
                         @if(Auth::check())
-                            <li><a href="/issues/create">Post An Issue</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="/issues">Profile</a></li>
+                            <li><a href="/issues/create">Submit</a></li>
+                            <li><a href="/issues?following=true">Following</a></li>
+                            <li><a href="/issues">All</a></li>
                             <li><a href="{{ Url::to('logout') }}">Logout</a></li>
 
                         @else

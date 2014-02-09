@@ -20,7 +20,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
   public function tracked_issues()
   {
-      return $this->hasManyThrough('Issue', 'Track');
+
+  		$tracks = $this->tracks;
+  		$trackedIssues = array();
+  		foreach($tracks as $track){
+  			array_push($trackedIssues, $track->issue);
+  		}
+  		return $trackedIssues;
   }
 
 	/* Required for Laravel Auth */
