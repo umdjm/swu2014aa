@@ -1,18 +1,14 @@
 #search-box{
 width: 80%;
 }
-
 .intro-header{
     padding-top: 30px;
-    border: 1px solid #CCCDCE;
+    border-bottom: 1px solid #CCCDCE;
 
 }
 .issue-header{
     padding-bottom: 20px;
-    padding-top: 10px;
-}
-.issue-header .control-label{
-    text-align: right;
+    padding-top: 30px;
 }
 
 
@@ -28,9 +24,11 @@ width: 80%;
     border: 1px solid #CCCDCE;
 }
 .issue-name {
-    color: #0088CC;
-    font-size: 16px;
-    height:30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
 .item img {
    width: 100%;
