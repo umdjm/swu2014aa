@@ -35,7 +35,14 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::guest('login');
+	if (Auth::guest()) {
+		//store the url they were trying to hit in session
+        if(Request::segment(1) != "logout"){
+		    Session::put('returnUrl', Request::url());
+        }
+		return Redirect::to('/')
+			->with('flash_error', 'You must be logged in to view that page! You\'ll be redirected to your intended destination after logging in.');
+	}
 });
 
 

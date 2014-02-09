@@ -58,47 +58,53 @@
                 </script>
             @endif
 
+            <div class="navbar-scrolling">
+                <nav id="page_header" class="block-suw navbar navbar-default" role="navigation">
+                  <div class="container-fluid">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="/"><img src="{{ URL::to('/FW-logo.png')}}" /img></a>
+                    </div>
 
-            <nav id="page_header" class="block-suw navbar navbar-default" role="navigation">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="/"><img src="{{ URL::to('/FW-logo.png')}}" /img></a>
-                </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav">
+                        
+                        @if(Auth::check())
+                            <li class='active'><a href="/issues/create">Post An Issue</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="/issues">Profile</a></li>
+                            <li><a href="{{ Url::to('logout') }}">Logout</a></li>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="/issues">Issues</a></li>
-                    <li><a href="reports">Reports</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Who We Are</a></li>
-                        <li><a href="#">How Issues Get Fixed</a></li>
-                        <li><a href="#">How do Ideas Get Funded</a></li>
+                        @else
+                            <li class='active'><a href="#get-started">Get Started</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#login" data-toggle='modal'>Login</a></li>
+                        @endif
                       </ul>
-                    </li>
-                    @if(Auth::check())
-                        <li><a href="{{ Url::to('logout') }}">Logout</a></li>
-                    @else
-                        <li><a href="#login" data-toggle='modal'>Login</a></li>
-                    @endif
-                  </ul>
-                </div><!-- /.navbar-collapse -->
-              </div><!-- /.container-fluid -->
-            </nav>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+
         <div id="content">
             @yield('content')
         </div>
         
         <div id="footer">
-            @yield('footer')
+            <div class="container" id="footer">
+                <div class="row">
+                    <br />
+                    <p>&copy; FixWorthy 2014</p>
+                </div>
+            </div>
         </div>
 
         <!-- login modal -->

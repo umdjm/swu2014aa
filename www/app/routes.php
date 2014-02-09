@@ -15,12 +15,17 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
-
-Route::get('/reports', function()
-{
-	return View::make('issues.reports');
-});
 Route::post('login', 'UsersController@login');
-Route::get('logout', 'UsersController@logout');
-Route::resource('users', 'UsersController');
-Route::resource('issues', 'IssuesController');
+Route::get('users/create', array('uses' => 'UsersController@create'));
+Route::post('users', array('uses' => 'UsersController@store'));
+
+// Route::group(array('before' => 'auth'), function()
+// {
+	Route::get('/reports', function()
+	{
+		return View::make('issues.reports');
+	});
+	Route::get('logout', 'UsersController@logout');
+	Route::resource('users', 'UsersController');
+	Route::resource('issues', 'IssuesController');
+// });
