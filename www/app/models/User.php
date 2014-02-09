@@ -38,5 +38,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         return $this->email;
     }
-
+	
+	public function canEdit($issue) {
+		return $this->role == 'admin' || $this->user_id == $this->id;
+	}    
 }
