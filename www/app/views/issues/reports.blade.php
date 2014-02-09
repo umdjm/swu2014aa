@@ -55,7 +55,17 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-12 col-centered">
+    <button type="button" class="btn btn-info reset" onclick="javascript:dc.filterAll();dc.redrawAll();">Clear Filters</button>
+  </div>
+</div>
+
+
 <script>
+
+var statuses = ["Open", "Escalated", "Resolved", "In Progress"];
+var statusColors = ["#9ecae1", "#f3643c", "#2ca02c", "#3182bd"];
 function getDaysDiff(d1, d2) {
             var t2 = d2.getTime();
             var t1 = d1.getTime();
@@ -108,7 +118,7 @@ var chartExample = {
     dateChart
             .elasticY(true)
             .renderHorizontalGridLines(true)
-            .width(1200)
+            .width(1366)
             .height(280)
             .gap(10)
             .valueAccessor(function (d) {
@@ -153,6 +163,7 @@ var chartExample = {
     statusChart
         .width(600)
         .height(280)
+        .colors(d3.scale.ordinal().domain(statuses).range(statusColors))
         .dimension(statusDimension)
         .group(statusGroup);
 
@@ -160,6 +171,7 @@ var chartExample = {
             .width(600)
             .height(280)
             .dimension(daysOpenDimension)
+            .colors(d3.scale.ordinal().domain([""]).range(["#3182bd"]))
             .group(daysOpenGroup)
             .elasticX(true)
             .xAxis().ticks(4);
@@ -170,15 +182,14 @@ var chartExample = {
         var issues = [];
 
         var types = ["Fixes", "Cleaning", "Restock"];
-        var statuses = ["Open", "Escalated", "Resolved", "In Progress"];
         var departments = [
                     {Name:"Janitorial", Owners:["Bob Jenkins", "Pat Farley"]},
-                    {Name:"Receptionist", Owners:["Barry Foster", "Pam Wilkens", "Sam Ryley"]}
+                    {Name:"Receptionist", Owners:["Barry Foster", "Pam Wilkens"]}
                     ];
         var startDate = new Date(2013,1,1,0,0) ;
         var endDate = new Date(2014,0,31,0,0) ;
         var dateDiff = getDaysDiff(startDate, endDate);
-        var daysOpenedSet = [0, 1, 2, 3, 4,5, 6, 7, 8, 9, 10];
+        var daysOpenedSet = [0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 7, 7, 8, 8, 9, 10];
         for(var i = 0; i < 1000; i++)
         {
             var type = types[Math.floor(Math.random() * types.length)];
