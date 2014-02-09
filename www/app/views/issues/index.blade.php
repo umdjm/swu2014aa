@@ -2,55 +2,71 @@
 
 @section('content')
 
+        <link rel="stylesheet" href="{{ URL::to('css/issue-index.css') }}">
 
-<div class="row">
-  <div class="col-md-12">
-   <h1>Current Issues in the Ann Arbor Community</h1>
+
+<div class="row issue-header">
+  <div class="col-md-2">
+        <button type="button" class="btn btn-default btn-selected">Open</button>
+        <button type="button" class="btn btn-default">Fixed</button>
   </div>
-</div>
-
-<div id="map-row" class="row">
-  <div class="col-md-4">
-  <p>
-      Location
-      <select class="form-control">
-        <option>Ann Arbor</option>
-        <option>Plymouth/Canton</option>
-        <option>Detroit </option>
-      </select>
-  </p>
-  <p>
-      Category
-      <select class="form-control">
-        <option>Maintenance</option>
-        <option>Landscape</option>
-        <option>Cleaning</option>
-        <option>Grafiti</option>
-      </select>
-  </p>
-  </div>
-  <div class="col-md-8">
-    <div id="map-div"></div>
-  </div>
-</div>
-
-
-<ul id="ul-example" class="row">
-
-
-  @foreach ($issues as $issue)
-    <li class="issue col-md-3" data-color="gray">
-      <a href="/issues/{{ $issue->id }}">
-      <div class="thumbnail">
-          <img src="{{ $issue->photo }}" />
-        <div class="caption">
-          <h4>{{ $issue->name }}</h4>
-        </div>
+  <div class="col-md-3">
+      <div class="row">
+            <div class="col-md-3">
+                <label class="important h4 understated control-label">Category</label>
+            </div>
+            <div class="col-md-9">
+                  <select class="form-control">
+                              <option>Broken</option>
+                              <option>Dirty</option>
+                              <option>Graffiti</option>
+                  </select>
+            </div>
       </div>
-      </a>
+  </div>
+  <div class="col-md-3">
+      <div class="row">
+            <div class="col-md-3">
+              <label class="important h4 understated control-label" for="issue-sort">Sort</label>
+            </div>
+            <div class="col-md-9">
+                <select class="form-control">
+                      <option>By Opened Date</option>
+                      <option>By Status</option>
+                      <option>By Priority</option>
+                </select>
+            </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <input id="search-box" type="text" placeholder="Search Issues">
+  </div>
+</div>
+
+
+
+<div class="wrapper" id="idea-wrapper">
+<ol id="idea-list" class="block-list grid main-grid">
+
+    <li data-count="2" data-totalcount="12" class="grid-block pill">
+    	<article class="grid-idea">
+            <a class="cover" href="/issues/create">
+    			<img src="{{ URL::to('imgs/post-an-issue.png')}}" class="pill grid-img photo" alt="IdeaPot" width="1000px" height="1000px">
+            </a>
+    	</article>
+    </li>
+  @foreach ($issues as $issue)
+
+    <li data-count="2" data-totalcount="12" class="grid-block pill">
+    	<article class="grid-idea">
+            <a class="cover" href="/issues/{{ $issue->id }}">
+                <h1 class="important h4 overlay">{{ $issue->name }}</h1>
+    			<img src="{{ $issue->photo }}" class="pill grid-img photo" alt="IdeaPot" width="1000px" height="1000px">
+            </a>
+    	</article>
     </li>
   @endforeach
-</ul>
+</ol>
 
  <script>
   var points;

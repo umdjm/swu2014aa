@@ -25,6 +25,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="{{ URL::to('js/jquery.dataTables.min.js')}}"></script>
         <script src="{{ URL::to('js/shared.js')}}"></script>
+        <script src="{{ URL::to('js/masonry.js')}}"></script>
         <script src="{{ URL::to('js/geolocate.js')}}"></script>
         <script src="{{ URL::to('js/crossfilter.js')}}"></script>
         <script src="{{ URL::to('js/d3.js')}}"></script>
