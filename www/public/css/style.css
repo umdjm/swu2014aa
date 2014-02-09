@@ -258,3 +258,14 @@ fieldset[disabled] .btn-custom.active {
 	padding:8px;
 }
 
+.priorityHigh {
+    color: red;
+}
+
+.priorityMedium {
+    color: #e8c022; /*goldenrod*/
+}
+
+.priorityLow {
+    color: #a4bd14; /*yellowgreen*/
+}
