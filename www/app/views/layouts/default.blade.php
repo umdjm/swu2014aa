@@ -75,8 +75,7 @@
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="/issues">Issues</a></li>
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Sponsors</a></li>
+                    <li><a href="reports">Reports</a></li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <b class="caret"></b></a>
                       <ul class="dropdown-menu">
