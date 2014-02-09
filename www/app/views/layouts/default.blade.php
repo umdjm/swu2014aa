@@ -84,7 +84,7 @@
                         <ul class="nav navbar-nav">
                         
                         @if(Auth::check())
-                            <li><a href="/issues/create">Submit</a></li>
+                            <li><a href="/issues/create">Post An Issue</a></li>
                             <li><a href="/issues">View Issues</a></li>
                             @if(Auth::user()->isAdmin())
                                 <li><a href="/reports">Reports</a></li>

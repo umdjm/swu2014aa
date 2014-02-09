@@ -2,7 +2,7 @@
 
 @section('content')
 	<div>
-	    <div id="get-started" class="intro-suw" style="background-image: url(http://electricsaver1200.com/blog/wp-content/uploads/2013/03/fixing-light.jpg); background-size: cover;">
+	    <div id="get-started" class="intro-suw" style="background-image: url({{ URL::to('imgs/main_page.jpg') }}); background-size: cover;">
 	        <h1 class="block-suw important-suw grabber-suw title-intro-suw" id="callout">Take Pictures. Solve Problems.</h1>
 
 	        <!--<a href="." class="cta-btn-suw pill-suw h2">How It Works</a>-->

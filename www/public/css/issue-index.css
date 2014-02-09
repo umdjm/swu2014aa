@@ -2032,6 +2032,7 @@ textarea {
 .grid-idea .description {
     left: 0;
     position: absolute;
+    padding: 0px;
     width: 100%;
 }
 .grid-idea .h4 {
