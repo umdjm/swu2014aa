@@ -81,7 +81,7 @@ class IssuesController extends BaseController {
 		$issue = Issue::find($id);
 		$user = Auth::user();
 
-		if( $user->id == $issue->user_id || $user->role == 'admin') {
+		if( $user->canEdit($issue) ) {
         	return View::make('issues.edit', array("issue" => $issue));
 		}
 		else {
@@ -99,16 +99,15 @@ class IssuesController extends BaseController {
 	{
 		$issue = Issue::find($id);
 		$user = Auth::user();
-		$isAdmin = $user->role == 'admin';
 
-		if( $user->id == $issue->user_id || $isAdmin) {
+		if( $user->canEdit($issue) ) {
 
 			$issue->name = Input::get("name");
 			$issue->desc = Input::get("desc");
 			$issue->latitude = Input::get("latitude");
 			$issue->longitude = Input::get("longitude");
 
-			if($isAdmin) {
+			if( $user->role == 'admin' ) {
 				$issue->priority =  Input::get("priority");
 				$issue->status =  Input::get("status");
 			}
