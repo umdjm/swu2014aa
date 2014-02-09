@@ -69,6 +69,8 @@
     <li data-count="2" data-totalcount="12" class="grid-block pill">
     	<article class="grid-idea">
             <a class="cover" href="/issues/{{ $issue->id }}">
+
+                <div class="circleBase idea-status status-{{ $issue->priority_string() }}"></div>
                 <h1 class="important h4 overlay issue-name" >{{ $issue->name }}</h1>
     			<img src="{{ $issue->photo }}" class="pill grid-img photo" alt="IdeaPot" width="1000px" height="1000px">
             </a>

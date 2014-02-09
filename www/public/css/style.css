@@ -1,6 +1,26 @@
 #search-box{
 width: 80%;
 }
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+.idea-status{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 20px;
+    left: 20px;
+}
+.status-High{
+    background-color: #b52815;
+}
+.status-Medium{
+    background-color: #ffb206;
+}
+.status-Low{
+    background-color: #36b26b;
+}
 .intro-header{
     padding-top: 30px;
     border-bottom: 1px solid #CCCDCE;
