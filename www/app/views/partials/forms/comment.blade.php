@@ -4,7 +4,7 @@
         <div class="form-group">
             {{ Form::hidden('issue_id', $issue_id) }}
             {{ Form::label('body', 'Leave a comment:') }}
-            {{ Form::textarea('body', null, array('class'=>'form-control required', 'rows'=>3)) }}
+            {{ Form::textarea('body', null, array('class'=>'form-control required', 'rows'=>3, 'required'=>true)) }}
         </div>
     </fieldset>
     <div class="form-group">

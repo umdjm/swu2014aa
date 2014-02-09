@@ -16,6 +16,9 @@ class IssuesController extends BaseController {
 		$mine = array();
 
 		foreach ($all as $issue) {
+		    if($issue->photo == ""){
+		        $issue->photo = "/imgs/FW-Default-wrench.jpg";
+		    }
 			if ($issue->user->id == $user->id) {
 				array_push($mine, $issue);
 			}
@@ -48,7 +51,7 @@ class IssuesController extends BaseController {
 		$issue->user_id = Auth::user()->id;
 		$issue->latitude = Input::get("latitude");
 		$issue->longitude = Input::get("longitude");
-		$issue->priority = 1;
+		$issue->priority = 3;
 
 		if (Input::hasFile('photo'))
 		{
@@ -78,6 +81,9 @@ class IssuesController extends BaseController {
 	public function show($id)
 	{
 		$issue = Issue::find($id);
+        if($issue->photo == ""){
+            $issue->photo = "/imgs/FW-Default-wrench.jpg";
+        }
         return View::make('issues.show', array("issue" => $issue));
 	}
 

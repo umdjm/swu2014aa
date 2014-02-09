@@ -37,7 +37,7 @@ class TracksController extends BaseController {
 		$track->notify = false;
 		$track->save();
 
-		return Redirect::to('issues/' . $track->issue_id)->with("flash_success", "You're now following this issue!");
+		return Redirect::to('issues/' . $track->issue_id)->with("flash_success", "You're now endorsing this issue!");
 		// $redirect = Redirect::route('tracks', $track->id);
 		// die("Receiving post");
 	}
@@ -87,7 +87,7 @@ class TracksController extends BaseController {
 			$issue_id = Track::find($id)->issue->id;
 	    Track::destroy($id);
 
-	    return Redirect::to('issues/'.$issue_id)->with("flash_success", "You're no longer following this issue... :[");;
+	    return Redirect::to('issues/'.$issue_id)->with("flash_success", "You're no longer endorsing this issue... :[");;
 	}
 
 }
