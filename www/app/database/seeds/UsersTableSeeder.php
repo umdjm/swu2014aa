@@ -15,7 +15,7 @@ class UsersTableSeeder extends Seeder {
 		$firstUser->save();
 
 		$secondUser = new User();
-		$secondUser->email = "collsain@umich.edu";
+		$secondUser->email = "example@example.com";
 		$secondUser->password = Hash::make("scottsfakepassword");
 		$secondUser->name = 'Scott High';
 		$secondUser->role = "user";
@@ -24,5 +24,4 @@ class UsersTableSeeder extends Seeder {
 		// Uncomment the below to run the seeder
 		// DB::table('users')->insert($users);
 	}
-
 }
