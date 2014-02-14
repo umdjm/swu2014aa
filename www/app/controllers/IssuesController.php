@@ -9,14 +9,19 @@ class IssuesController extends BaseController {
 	 */
 	public function index()
 	{
-		if(Input::has('following')){
-			$issues = Auth::user()->tracked_issues();
-			// die(count($issues));
-		} else {
-			$issues = Issue::where('status','<>', 'closed')->get();
+		$user = Auth::user();
+
+		$all = Issue::where('status','<>','closed')->get();
+		$following = $user->tracked_issues();
+		$mine = array();
+
+		foreach ($all as $issue) {
+			if ($issue->user->id == $user->id) {
+				array_push($mine, $issue);
+			}
 		}
 		
-    return View::make('issues.index', array("issues" => $issues));
+    	return View::make('issues.index', array('all'=>$all, 'following'=>$following, 'mine'=>$mine));
 	}
 
 	/**
