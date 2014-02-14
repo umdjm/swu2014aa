@@ -82,20 +82,32 @@
 	 		<h1>Pricing</h1>
 	 	</div>
 	 	<div class="row">
+	 		<div class="hidden-lg hidden-md">
+	 			<hr>
+	 		</div>
 	 		<div class="col-lg-3">
-	 			<h4>Less than 2,000 students</h4>
+	 			<h4>Under 2,000 Students</h4>
 	 			<h2>Free!</h2>
 	 		</div>
+	 		<div class="hidden-lg hidden-md">
+	 			<hr>
+	 		</div>
 	 		<div class="col-lg-3">
-	 			<h4>Less than 10,000 students</h4>
+	 			<h4>Under 10,000 Students</h4>
 	 			<h2>$200 / month</h2>
 	 		</div>
-	 		<div class="col-lg-3">
-	 			<h4>Less than 20,000 students</h4>
-	 			<h2>$400 / month</h2>
+	 		<div class="hidden-lg hidden-md">
+	 			<hr>
 	 		</div>
 	 		<div class="col-lg-3">
-	 			<h4>More than 10,000 students</h4>
+	 			<h4>Under 20,000 Students</h4>
+	 			<h2>$400 / month</h2>
+	 		</div>
+	 		<div class="hidden-lg hidden-md">
+	 			<hr>
+	 		</div>
+	 		<div class="col-lg-3">
+	 			<h4>Over 20,000 Students</h4>
 	 			<h2>$550 / month</h2>
 	 		</div>
 	 	</div>
