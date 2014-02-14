@@ -13,7 +13,11 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	if(Auth::check()){
+		return Redirect::route('issues.index');
+	} else {
+		return View::make('hello');
+	}
 });
 Route::post('login', 'UsersController@login');
 Route::resource('users', 'UsersController');
