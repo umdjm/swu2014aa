@@ -48,7 +48,7 @@ class IssuesController extends BaseController {
 		$issue->user_id = Auth::user()->id;
 		$issue->latitude = Input::get("latitude");
 		$issue->longitude = Input::get("longitude");
-		$issue->priority = 1;
+		$issue->priority = 3;
 
 		if (Input::hasFile('photo'))
 		{
