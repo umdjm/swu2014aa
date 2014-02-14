@@ -386,3 +386,11 @@ img {
     margin-top: 50px;
 }
 
+#analytics-overview {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.analytics-highlight {
+    text-align: center;
+}
