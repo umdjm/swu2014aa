@@ -10,7 +10,6 @@
 		<div class="row">
 			<div class="col-md-6">
 			        <img class="issue-hero-image" src="{{ $issue->photo }}"></img>
-			        <div id="google-map"></div>
 			</div>
 			<div class="col-md-6">
 				<h3 class="issue-field-spacing">
@@ -28,14 +27,17 @@
 			                ->where('issue_id', '=', $issue->id)
 			                ->first(); ?>
 						{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks/' . $track->id, 'method' => 'DELETE')) }}
-							{{ Form::submit('Unfollow', array('class'=>'issue-btn issue-field-spacing btn btn-primary')) }}
+							{{ Form::submit('Endorsed', array('class'=>'issue-btn btn-endorsed issue-field-spacing btn btn-primary')) }}
+                            <span><i class="fa fa-thumbs-up"> </i>{{ $issue->get_tracking_count() }} </span>
 				    {{ Form::close() }}
 					@else
 						{{ Form::open(array('id' => 'form', 'role' => 'form', 'url' => 'tracks', 'method' => 'POST')) }}
 			        {{ Form::hidden('issue_id', $issue->id, array('id' => 'issue_id')) }}
 							{{ Form::submit('Endorse', array('class'=>'issue-btn issue-field-spacing btn btn-primary')) }}
+                            <span><i class="fa fa-thumbs-up"> </i>{{ $issue->get_tracking_count() }}</span>
 				    {{ Form::close() }}
 					@endif
+
                  @endif
 
                  <div class="row">
@@ -54,13 +56,16 @@
                     </div>
                 </div>
 			</div>
+		</div>
 
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-3">
+                    <div id="google-map"></div>
+                </div>
+                <div class="col-md-9">
                     @include('partials.comments', array('issue_id' => $issue->id, 'comments' => $issue->comments))
                 </div>
             </div>
-		</div>
 	<script>
 	    function initPage()
 	    {
@@ -78,8 +83,12 @@
 				zoom: 15,
 				center: new google.maps.LatLng(lat, lng),
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
-				mapTypeControl: false,
-				streetViewControl: false
+                scrollwheel: false,
+                navigationControl: false,
+                mapTypeControl: false,
+                scaleControl: false,
+                disableDoubleClickZoom: true,
+                draggable: false
 			};
 
 			var mapElem = document.getElementById('google-map'); 

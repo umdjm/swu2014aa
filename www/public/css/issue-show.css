@@ -21,3 +21,8 @@
     width: 225px;
     height: 225px;
     }
+
+.btn-endorsed {
+    background-color: #d3d3d3;
+    border: none;
+}
