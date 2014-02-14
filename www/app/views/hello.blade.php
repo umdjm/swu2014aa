@@ -77,7 +77,7 @@
 	 </div>
 
 	 <!-- Begin green band for pricing -->
-	 <div class="pricing">
+	 <div class="pricing" id="pricing">
 	 	<div class="row">
 	 		<div class="col-lg-8 col-lg-offset-2">
 	 			<h4>- PRICING STARTS AT -</h4>
@@ -89,13 +89,4 @@
 @stop
 
 
-@section('footer')
-	<div class="container" id="footer">
-		<div class="row">
-			<p>&copy; Fix Worthy 2014</p>
-		</div>
-	</div>
-
-	
-@stop
 
