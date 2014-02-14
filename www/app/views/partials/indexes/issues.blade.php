@@ -20,11 +20,7 @@
                   </div>
                   -->
                   <h1 class="important h4 overlay issue-name" >{{ $issue->name }}</h1>
-            @if($issue->photo != "")
       			 <img src="{{ $issue->photo }}" class="pill grid-img photo" alt="IdeaPot" width="1000px" height="1000px">
-            @else
-             <img src="/imgs/FW-Default-wrench.jpg" class="pill grid-img photo" alt="IdeaPot" width="1000px" height="1000px">
-            @endif
       			<div class="pill overlay description">
                       Priority:{{ $issue->priority_string() }}
                       <p>{{ $issue->desc }}</p>
