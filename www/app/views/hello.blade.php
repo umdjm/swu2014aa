@@ -14,7 +14,7 @@
 	    <div class="container" id="introduction">
 	    	<div class="row">
 	    		<div class="row" id="about">
-	    			<h2>How it works for students</h2>
+	    			<h2>How it works for students and staff</h2>
 	    		</div>
 	    		<div class="row">
 		    		<div class="col-lg-4 col-md-4 box">
