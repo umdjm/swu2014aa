@@ -79,9 +79,24 @@
 	 <!-- Begin green band for pricing -->
 	 <div class="pricing" id="pricing">
 	 	<div class="row">
-	 		<div class="col-lg-8 col-lg-offset-2">
-	 			<h4>- PRICING STARTS AT -</h4>
-	 			<h2>$250 / MONTH</h2>
+	 		<h1>Pricing</h1>
+	 	</div>
+	 	<div class="row">
+	 		<div class="col-lg-3">
+	 			<h4>Less than 2,000 students</h4>
+	 			<h2>Free!</h2>
+	 		</div>
+	 		<div class="col-lg-3">
+	 			<h4>Less than 10,000 students</h4>
+	 			<h2>$200 / month</h2>
+	 		</div>
+	 		<div class="col-lg-3">
+	 			<h4>Less than 20,000 students</h4>
+	 			<h2>$400 / month</h2>
+	 		</div>
+	 		<div class="col-lg-3">
+	 			<h4>More than 10,000 students</h4>
+	 			<h2>$550 / month</h2>
 	 		</div>
 	 	</div>
 	 </div>
