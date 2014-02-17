@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>FixWorthy</title>
+        <title>Fix Worthy</title>
         <link rel="shortcut icon" href="{{ URL::to('favicon.ico') }}" />
         <link href="{{ URL::to('fw-60x60.png') }}" rel="apple-touch-icon" />
         <link href="{{ URL::to('fw-76x76.png') }}" rel="apple-touch-icon" sizes="76x76" />
